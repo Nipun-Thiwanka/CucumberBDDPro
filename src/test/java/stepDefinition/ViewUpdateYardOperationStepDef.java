@@ -113,86 +113,266 @@ public class ViewUpdateYardOperationStepDef extends ViewUpdateYardOperationMain 
 	    
 	    @And("^I press the update button VUYO$")
 	    public void i_press_the_update_button_vuyo() throws Throwable {
-	        throw new PendingException();
+	        Thread.sleep(1000);
+	    	ViewUpdateYardOperationSub var1 = new ViewUpdateYardOperationSub(driver);
+	    	var1.ClickUpdateLink().click();
 	    }
 
 	    @And("^I scroll down to uploads VUYO$")
 	    public void i_scroll_down_to_uploads_vuyo() throws Throwable {
-	        throw new PendingException();
+	        ViewUpdateYardOperationSub var1 = new ViewUpdateYardOperationSub(driver);
+	    	JavascriptExecutor js = (JavascriptExecutor) driver;
+	   	 	js.executeScript("arguments[0].scrollIntoView();", var1.ScrollToDownUpload());
+	        Thread.sleep(2000);
 	    }
 
 	    @And("^I upload an image VUYO$")
 	    public void i_upload_an_image_vuyo() throws Throwable {
-	        throw new PendingException();
-	    }
+	        Thread.sleep(2000);
+			String imgPath = "C:\\Users\\ThiwankaRa\\Documents\\Testing Files - Do Not Delete\\Images\\test.png";
+			ViewUpdateYardOperationSub var1=new ViewUpdateYardOperationSub(driver);
+			var1.ClickToUploadImg().sendKeys(imgPath);
+   		 }
+	    
 
 	    @And("^I upload a file VUYO$")
 	    public void i_upload_a_file_vuyo() throws Throwable {
-	        throw new PendingException();
+	    Thread.sleep(2000);
+			String filePath = "C:\\Users\\ThiwankaRa\\Documents\\Testing Files - Do Not Delete\\Files\\test.pdf";
+			ViewUpdateYardOperationSub var1=new ViewUpdateYardOperationSub(driver);
+			var1.ClickToUploadFile().sendKeys(filePath);
 	    }
 
 	    @And("^I scroll down to other conditions VUYO$")
 	    public void i_scroll_down_to_other_conditions_vuyo() throws Throwable {
-	        throw new PendingException();
+	        ViewUpdateYardOperationSub var1 = new ViewUpdateYardOperationSub(driver);
+	    	JavascriptExecutor js = (JavascriptExecutor) driver;
+	   	 	js.executeScript("arguments[0].scrollIntoView(true);", var1.ScrollToDownOtherCondt());
+	        Thread.sleep(2000);
 	    }
 
 	    @And("^I set test condition as yes VUYO$")
 	    public void i_set_test_condition_as_yes_vuyo() throws Throwable {
-	        throw new PendingException();
+	        ViewUpdateYardOperationSub var1 = new ViewUpdateYardOperationSub(driver);
+			var1.ClickOnDropdownTestCondt().click();
+			Thread.sleep(2000);
+			var1.SelectYesTestCondt().click();
 	    }
 
 	    @And("^I set test condition date VUYO$")
 	    public void i_set_test_condition_date_vuyo() throws Throwable {
-	        throw new PendingException();
+	        Thread.sleep(2000);
+			ViewUpdateYardOperationSub var1 = new ViewUpdateYardOperationSub(driver);
+			var1.SelectDateTestCondt().click();
+			JavascriptExecutor js = (JavascriptExecutor) driver;
+			js.executeScript("arguments[0].value = ''", var1.SelectDateTestCondt());
+			var1.SelectDateTestCondt().sendKeys("2022-01-01");
 	    }
 
 	    @And("^I scroll down to insurance details VUYO$")
 	    public void i_scroll_down_to_insurance_details_vuyo() throws Throwable {
-	        throw new PendingException();
+	        ViewUpdateYardOperationSub var1 = new ViewUpdateYardOperationSub(driver);
+	    	JavascriptExecutor js = (JavascriptExecutor) driver;
+	   	 	js.executeScript("arguments[0].scrollIntoView();", var1.ScrollToDownUploadExpireDates());
+	        Thread.sleep(2000);
 	    }
 
 	    @And("^I change Insurance Expiry Date VUYO$")
 	    public void i_change_insurance_expiry_date_vuyo() throws Throwable {
-	        throw new PendingException();
+	        Thread.sleep(2000);
+			ViewUpdateYardOperationSub var1 = new ViewUpdateYardOperationSub(driver);
+			var1.SelectDateInsuaranceDate().click();
+			JavascriptExecutor js = (JavascriptExecutor) driver;
+			js.executeScript("arguments[0].value = ''", var1.SelectDateInsuaranceDate());
+			var1.SelectDateInsuaranceDate().sendKeys("2022-01-01");
 	    }
 
 	    @And("^I change License Expiry Date VUYO$")
 	    public void i_change_license_expiry_date_vuyo() throws Throwable {
-	        throw new PendingException();
+	        Thread.sleep(2000);
+			ViewUpdateYardOperationSub var1 = new ViewUpdateYardOperationSub(driver);
+			var1.SelectDateLision().click();
+			JavascriptExecutor js = (JavascriptExecutor) driver;
+			js.executeScript("arguments[0].value = ''", var1.SelectDateLision());
+			var1.SelectDateLision().sendKeys("2022-01-01");
 	    }
 
 	    @And("^I select transmission type VUYO$")
 	    public void i_select_transmission_type_vuyo() throws Throwable {
-	        throw new PendingException();
+	        ViewUpdateYardOperationSub var1 = new ViewUpdateYardOperationSub(driver);
+			var1.ClickOnDropdownTransmissionTyp().click();
+			Thread.sleep(2000);
+			var1.SelectAuto().click();
 	    }
 
 	    @And("^I select fuel type VUYO$")
 	    public void i_select_fuel_type_vuyo() throws Throwable {
-	        throw new PendingException();
+	        ViewUpdateYardOperationSub var1 = new ViewUpdateYardOperationSub(driver);
+			var1.ClickOnDropdownFuelTyp().click();
+			Thread.sleep(2000);
+			var1.SelectPetrol().click();
 	    }
 
 	    @And("^I set milage VUYO$")
 	    public void i_set_milage_vuyo() throws Throwable {
-	        throw new PendingException();
+	        Thread.sleep(1000);
+	    	ViewUpdateYardOperationSub var1 = new ViewUpdateYardOperationSub(driver);
+	    	var1.SetMilage().sendKeys("56000");
 	    }
 
 	    @And("^I number of owners VUYO$")
 	    public void i_number_of_owners_vuyo() throws Throwable {
-	        throw new PendingException();
+	        Thread.sleep(1000);
+	    	ViewUpdateYardOperationSub var1 = new ViewUpdateYardOperationSub(driver);
+	    	var1.SetOwners().sendKeys("2");
 	    }
 
 	    @And("^I scroll down to save VUYO$")
 	    public void i_scroll_down_to_save_vuyo() throws Throwable {
-	        throw new PendingException();
+	        ViewUpdateYardOperationSub var1 = new ViewUpdateYardOperationSub(driver);
+	    	JavascriptExecutor js = (JavascriptExecutor) driver;
+	   	 	js.executeScript("arguments[0].scrollIntoView();", var1.ScrollToDownToSave());
+	        Thread.sleep(2000);
 	    }
 
 	    @And("^I click save button VUYO$")
 	    public void i_click_save_button_vuyo() throws Throwable {
-	        throw new PendingException();
+	        Thread.sleep(1000);
+	    	ViewUpdateYardOperationSub var1 = new ViewUpdateYardOperationSub(driver);
+	    	var1.ClickSaveBtn().click();
 	    }
 
 	    @And("^I click yes button VUYO$")
 	    public void i_click_yes_button_vuyo() throws Throwable {
-	        throw new PendingException();
+	        Thread.sleep(1000);
+	    	ViewUpdateYardOperationSub var1 = new ViewUpdateYardOperationSub(driver);
+	    	var1.ClickYesBtn().click();
 	    }
+
+		@And("^I scroll down to bonded details VUYO$")
+    	public void i_scroll_down_to_bonded_details_vuyo() throws Throwable {
+        	Thread.sleep(1000);
+	    	ViewUpdateYardOperationSub var1 = new ViewUpdateYardOperationSub(driver);
+			JavascriptExecutor js = (JavascriptExecutor) driver;
+   	 		js.executeScript("arguments[0].scrollIntoView(true);", var1.ScrollToBondedDetails());
+    }
+
+    	
+		@When("I tick on bonded details VUYO")
+		public void i_tick_on_bonded_details_vuyo() throws InterruptedException {
+			Thread.sleep(1000);
+	    	ViewUpdateYardOperationSub var1 = new ViewUpdateYardOperationSub(driver);
+			var1.ClickBondedDetailsCheckBox().click();
+	}
+
+		@When("I fill offence VUYO")
+		public void i_fill_offence_vuyo() throws Throwable {
+        	Thread.sleep(1000);
+	    	ViewUpdateYardOperationSub var1 = new ViewUpdateYardOperationSub(driver);
+			var1.EnterOffence().sendKeys("Test Offence");
+    }
+
+		@When("I fill police station VUYO")
+		public void i_fill_police_station_vuyo() throws Throwable {
+        	Thread.sleep(1000);
+	    	ViewUpdateYardOperationSub var1 = new ViewUpdateYardOperationSub(driver);
+			var1.EnterPoliceStation().sendKeys("Test Police Station");
+    }
+
+		@When("I select bonded date VUYO")
+		public void i_select_bonded_date_vuyo() throws Throwable {
+        	Thread.sleep(1000);
+	    	ViewUpdateYardOperationSub var1 = new ViewUpdateYardOperationSub(driver);
+			var1.SelectBondedDate().click();
+			JavascriptExecutor js = (JavascriptExecutor) driver;
+			js.executeScript("arguments[0].value = ''", var1.SelectBondedDate());
+			Thread.sleep(2000);
+			var1.SelectBondedDate().sendKeys("2023-01-01");
+    }
+
+		@When("I enter bonded value VUYO")
+		public void i_enter_bonded_value_vuyo() throws Throwable {
+			Thread.sleep(1000);
+	    	ViewUpdateYardOperationSub var1 = new ViewUpdateYardOperationSub(driver);
+			var1.EnterBondedValue().sendKeys("100000");
+    }
+
+    	@And("^I select Next Hearing Date VUYO$")
+    	public void i_select_next_hearing_date_vuyo() throws Throwable {
+        	Thread.sleep(1000);
+	    	ViewUpdateYardOperationSub var1 = new ViewUpdateYardOperationSub(driver);
+			var1.SelectNextHearingDate().click();
+			JavascriptExecutor js = (JavascriptExecutor) driver;
+			js.executeScript("arguments[0].value = ''", var1.SelectNextHearingDate());
+			Thread.sleep(2000);
+			var1.SelectNextHearingDate().sendKeys("2023-06-01");
+    }
+
+    	@And("^I select Bonded Release Date VUYO$")
+    	public void i_select_bonded_release_date_vuyo() throws Throwable {
+        	Thread.sleep(1000);
+	    	ViewUpdateYardOperationSub var1 = new ViewUpdateYardOperationSub(driver);
+			var1.SelectBondedReleaseDate().click();
+			JavascriptExecutor js = (JavascriptExecutor) driver;
+			js.executeScript("arguments[0].value = ''", var1.SelectBondedReleaseDate());
+			Thread.sleep(2000);
+			var1.SelectBondedReleaseDate().sendKeys("2024-01-01");
+    }
+
+    	@And("^I click on select lawyer link VUYO$")
+    	public void i_click_on_select_lawyer_link_vuyo() throws Throwable {
+        	Thread.sleep(1000);
+	    	ViewUpdateYardOperationSub var1 = new ViewUpdateYardOperationSub(driver);
+			var1.ClickSelecLawyerLink().click();
+    }
+
+    	@And("^I enter lawyer name VUYO$")
+    	public void i_enter_lawyer_name_vuyo() throws Throwable {
+        	Thread.sleep(1000);
+	    	ViewUpdateYardOperationSub var1 = new ViewUpdateYardOperationSub(driver);
+			var1.EnterLawyerName().sendKeys("LOLC");
+    }
+
+    	@And("^I press lawyer search button VUYO$")
+    	public void i_press_lawyer_search_button_vuyo() throws Throwable {
+        	Thread.sleep(1000);
+	    	ViewUpdateYardOperationSub var1 = new ViewUpdateYardOperationSub(driver);
+			var1.ClickLawyerSearchButton().click();
+    }
+
+		@And("^I press lawyer select button VUYO$")
+    	public void i_press_lawyer_select_button_vuyo() throws Throwable {
+        	Thread.sleep(1000);
+	    	ViewUpdateYardOperationSub var1 = new ViewUpdateYardOperationSub(driver);
+			var1.ClickLawyerSelectButton().click();
+    }
+
+    	@And("^I enter case number VUYO$")
+    	public void i_enter_case_number_vuyo() throws Throwable {
+        	Thread.sleep(1000);
+	    	ViewUpdateYardOperationSub var1 = new ViewUpdateYardOperationSub(driver);
+			var1.EnterCaseNumber().sendKeys("Test-100");
+    }
+
+		@When("I enter court house VUYO")
+		public void i_enter_court_house_vuyo() throws Throwable {
+        	Thread.sleep(1000);
+	    	ViewUpdateYardOperationSub var1 = new ViewUpdateYardOperationSub(driver);
+			var1.EnterCourtHouse().sendKeys("Panadura");
+    }
+
+    	@And("^I enter Name Of the Person Appear VUYO$")
+    	public void i_enter_name_of_the_person_appear_vuyo() throws Throwable {
+        	Thread.sleep(1000);
+	    	ViewUpdateYardOperationSub var1 = new ViewUpdateYardOperationSub(driver);
+			var1.EntereNameOfPerson().sendKeys("Mr.Perera");
+    }
+
+		@When("I enter remarks VUYO")
+		public void i_enter_remarks_vuyo() throws Throwable {
+        	Thread.sleep(1000);
+	    	ViewUpdateYardOperationSub var1 = new ViewUpdateYardOperationSub(driver);
+			var1.EnterRemarksInBonded().sendKeys("LOLC");
+    }
+
 }
