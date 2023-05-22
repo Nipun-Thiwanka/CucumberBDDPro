@@ -13,7 +13,6 @@ import mark_As_Seized_Cancellation.MarkAsSeizedCancellationSub;
 import io.cucumber.java.en.And;
 import io.cucumber.java.en.Given;
 import io.cucumber.java.en.When;
-import markAsRepossessSeize.MarkAsRepossessSeizeSub;
 
 public class MarkAsSeizedCancellationStepDef extends MarkAsSeizedCancellationMain {
 

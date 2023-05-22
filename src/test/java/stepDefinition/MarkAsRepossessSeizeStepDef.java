@@ -3,13 +3,9 @@ package stepDefinition;
 import java.util.List;
 import java.util.concurrent.TimeUnit;
 
-import org.openqa.selenium.By;
 import org.openqa.selenium.JavascriptExecutor;
-import org.openqa.selenium.WebElement;
-
 import com.beust.jcommander.internal.Lists;
 
-import cucumber_pro.CucumberBDDPro.Landing;
 import io.cucumber.java.en.And;
 import io.cucumber.java.en.Given;
 import io.cucumber.java.en.When;
@@ -153,7 +149,6 @@ public class MarkAsRepossessSeizeStepDef extends MarkAsRepossessSeizeMain  {
     	MarkAsRepossessSeizeSub var1=new MarkAsRepossessSeizeSub(driver);
     	var1.clickOnRepossessOrderNum().click();
     }
-
     
     @And("^User need to scroll div1$")
     public void user_need_to_scroll_div1() throws Throwable {
@@ -199,9 +194,4 @@ public class MarkAsRepossessSeizeStepDef extends MarkAsRepossessSeizeMain  {
     	MarkAsRepossessSeizeSub var1=new MarkAsRepossessSeizeSub(driver);
 		var1.yesToSavewithContractNum().click();
     }
-    
-
-    
-    
-    
 }

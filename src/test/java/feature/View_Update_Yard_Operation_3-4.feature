@@ -1,4 +1,4 @@
-@tag1
+@View_Update_Yard_Operations
 Feature: Yard Operation
   I want to View Update Yard Operations
 
@@ -51,7 +51,7 @@ Feature: Yard Operation
     And I click yes button VUYO
 
   @click_on_edit_yard_operation_with_sales_stop_and_bonded_details
-  	Scenario: Update Yard Operation
+  	Scenario: Update Yard Operation with sales stop and bonded details
   	#VUYO contains "View Update Yard Operaation"
     Given I need to navigate LOLC FusionX Loging page for VUYO
     When I enter VUYO1 <Username>
@@ -86,3 +86,15 @@ Feature: Yard Operation
     And I enter court house VUYO 
     And I enter Name Of the Person Appear VUYO
     And I enter remarks VUYO 
+    And I scroll down to sales stop VUYO
+    And I tick on sales stop check box VUYO
+    And I click on Select Stop By link VUYO
+    And I enter search value in Stop By link VUYO
+    And I select search result in Stop By link VUYO
+    And I enter Sales Stop Date VUYO
+    And I select Sales Stop Reason VUYO
+    And I click never expire VUYO
+    And I click on Sales Stop Save button VUYO
+   	And I click on Sales Stop ok button VUYO
+    And I scroll down to save with sales stop VUYO
+    And I click yes button in sales stop VUYO

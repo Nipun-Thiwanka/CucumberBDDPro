@@ -1,5 +1,5 @@
 
-@tag
+@Mark_as_Repossess/Seized
 Feature: Mark as Repossess/Seized
   I want to use this template for my feature file
 
@@ -23,7 +23,7 @@ Feature: Mark as Repossess/Seized
     And User need to save1
     And User Select ok1
     
-     @search_by_contract_number_in_Mark_as_Repossess
+  @search_by_contract_number_in_Mark_as_Repossess
   Scenario: Update the status of vehicle with contract number
     Given I need to navigate LOLC FusionX Loging page1
     When I enter1 <Username>
@@ -45,7 +45,7 @@ Feature: Mark as Repossess/Seized
     And User need to save1
     And User Select ok with contract num1
     
-    @search_by_chassis_number_in_Mark_as_Repossess
+  @search_by_chassis_number_in_Mark_as_Repossess
   Scenario: Update the status of vehicle with contract number
     Given I need to navigate LOLC FusionX Loging page1
     When I enter1 <Username>
@@ -67,7 +67,7 @@ Feature: Mark as Repossess/Seized
     And User need to save1
     And User Select ok with contract num1
     
-    @search_by_serial_number_in_Mark_as_Repossess
+  @search_by_serial_number_in_Mark_as_Repossess
   Scenario: Update the status of vehicle with contract number
     Given I need to navigate LOLC FusionX Loging page1
     When I enter1 <Username>
@@ -89,7 +89,7 @@ Feature: Mark as Repossess/Seized
     And User need to save1
     And User Select ok with contract num1
     
-    @search_by_Repossess_order_number_in_Mark_as_Repossess
+  @search_by_Repossess_order_number_in_Mark_as_Repossess
   Scenario: Update the status of vehicle with contract number
     Given I need to navigate LOLC FusionX Loging page1
     When I enter1 <Username>

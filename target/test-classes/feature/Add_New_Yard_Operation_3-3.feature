@@ -1,4 +1,4 @@
-@tag1
+@Click_on_Add_New_Yard-Operation
 Feature: Yard Operation
   I want to use this template for my feature file
 

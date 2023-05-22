@@ -1,5 +1,5 @@
 
-@tag
+@Click_on_Hand_Over
 Feature: Mark As Seized/Hand over
   I want to use this template for my feature file
 
@@ -38,7 +38,7 @@ Feature: Mark As Seized/Hand over
     And I click on dropdown
     And I select by contract number
     And I press the search button
-    And I click on select button
+    And I click on select button in qa domain
     And User need to scroll div
     And User need mark as handovered
     And User need to scroll back div
@@ -60,7 +60,7 @@ Feature: Mark As Seized/Hand over
     And I click on dropdown
     And I select by chassis number
     And I press the search button
-    And I click on select button
+    And I click on select button in qa domain
     And User need to scroll div
     And User need mark as handovered
     And User need to scroll back div
@@ -82,7 +82,7 @@ Feature: Mark As Seized/Hand over
     And I click on dropdown
     And I select by serial number
     And I press the search button
-    #And I click on select button
+    #And I click on select button in qa domain
     #And User need to scroll div
     #And User need mark as handovered
     #And User need to scroll back div
@@ -104,7 +104,7 @@ Feature: Mark As Seized/Hand over
     And I click on dropdown
     And I select by repossess order number
     And I press the search button
-    #And I click on select button
+    #And I click on select button in qa domain
     #And User need to scroll div
     #And User need mark as handovered
     #And User need to scroll back div

@@ -301,5 +301,88 @@ public class ViewUpdateYardOperationSub extends ViewUpdateYardOperationMain{
 		return driver.findElement(var_EnterRemarksInBonded);
 	}
 
+
+
+
+
+	public WebElement ScrollDownToSalesStop()
+	{
+		By var_ScrollDownToSalesStop = By.xpath("//*[@id=\"root\"]/div/div/div[2]/div/div/div/div[2]/div/div/div/div[1]/div/div[7]/div/div[2]/div");
+		return driver.findElement(var_ScrollDownToSalesStop);
+	}
+
+	public WebElement ClickOnSalesStopCheckBox()
+	{
+		By var_ClickOnSalesStopCheckBox = By.xpath("//*[@id=\"root\"]/div/div/div[2]/div/div/div/div[2]/div/div/div/div[1]/div/div[7]/div/div[2]/div/div/div/form/label/span[1]/input");
+		return driver.findElement(var_ClickOnSalesStopCheckBox);
+	}
+
+	public WebElement ClickOnSalesStopByLink()
+	{
+		By var_ClickOnSalesStopByLink = By.xpath("//*[@id=\"root\"]/div/div/div[2]/div/div/div/div[2]/div/div/div/div[1]/div/div[7]/div/div[2]/div/div/div/form/div/div[1]/div[2]/div/div/div/div/div[1]/p/a");
+		return driver.findElement(var_ClickOnSalesStopByLink);
+	}
+
+	public WebElement EnterSearchValueInStopByLink()
+	{
+		By var_EnterSearchValueInStopByLink = By.xpath("/html/body/div[9]/div/div[2]/div/div[2]/div[2]/div[1]/div/div[1]/span/input");
+		return driver.findElement(var_EnterSearchValueInStopByLink);
+	}
+
+	public WebElement ClickOnSearchResultInSalesStopBy()
+	{
+		By var_ClickOnSearchResultInSalesStopBy = By.xpath("/html/body/div[9]/div/div[2]/div/div[2]/div[2]/div[2]/div/div/div/div/div/div/div/table/tbody/tr[2]/td[3]");
+		return driver.findElement(var_ClickOnSearchResultInSalesStopBy);
+	}
+
+	public WebElement EnterSalesStopDate()
+	{
+		By var_EnterSalesStopDate = By.xpath("//*[@id=\"stopDate\"]");
+		return driver.findElement(var_EnterSalesStopDate);
+	}
+
+	public WebElement ClickOnDropdownStopReson()
+	{
+		By var_ClickOnDropdownStopReson = By.xpath("//*[@id=\"root\"]/div/div/div[2]/div/div/div/div[2]/div/div/div/div[1]/div/div[7]/div/div[2]/div/div/div/form/div/div[2]/div/div[1]/div/div/div/div/div");
+		return driver.findElement(var_ClickOnDropdownStopReson);
+	}
+
+	public WebElement SelectClientAgreed()
+	{
+		By var_SelectClientAgreed = By.xpath("/html/body/div[11]/div/div/div/div[2]/div[1]/div/div/div[1]/div");
+		return driver.findElement(var_SelectClientAgreed);
+	}
+
+	public WebElement ClickOnNeverExpire()
+	{
+		By var_ClickOnNeverExpire = By.xpath("//*[@id=\"root\"]/div/div/div[2]/div/div/div/div[2]/div/div/div/div[1]/div/div[7]/div/div[2]/div/div/div/label/span[1]/input");
+		return driver.findElement(var_ClickOnNeverExpire);
+	}
+
+	public WebElement ClickOnSalesStopSaveBtn()
+	{
+		By var_ClickOnSalesStopSaveBtn = By.xpath("//*[@id=\"root\"]/div/div/div[2]/div/div/div/div[2]/div/div/div/div[1]/div/div[7]/div/div[2]/div/div/div/div/button");
+		return driver.findElement(var_ClickOnSalesStopSaveBtn);
+	}
+
+	public WebElement ClickOnSalesStopSaveBtnYes()
+	{
+		By var_ClickOnSalesStopSaveBtnYes = By.xpath("/html/body/div[13]/div/div[2]/div/div[2]/div/div/div[2]/button[2]");
+		return driver.findElement(var_ClickOnSalesStopSaveBtnYes);
+	}
+
+	public WebElement ScrollToSave()
+	{
+		By var_ScrollToSave = By.xpath("//*[@id=\"root\"]/div/div/div[2]/div/div/div/div[2]/div/div/div/div[2]/div/div/div/div[2]/button");
+		return driver.findElement(var_ScrollToSave);
+	}
+
+	public WebElement ClickYesBtnInSalesStop()
+	{
+		By var_ClickYesBtnInSalesStop = By.xpath("/html/body/div[14]/div/div[2]/div/div[2]/div/div/div[2]/button[2]");
+		return driver.findElement(var_ClickYesBtnInSalesStop);
+	}
+
+	
 	
 }

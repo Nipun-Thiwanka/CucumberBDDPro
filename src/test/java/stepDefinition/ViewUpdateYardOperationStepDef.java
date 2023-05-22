@@ -375,4 +375,96 @@ public class ViewUpdateYardOperationStepDef extends ViewUpdateYardOperationMain 
 			var1.EnterRemarksInBonded().sendKeys("LOLC");
     }
 
+		@And("^I scroll down to sales stop VUYO$")
+		public void i_scroll_down_to_sales_stop_vuyo() throws Throwable {
+			Thread.sleep(1000);
+	    	ViewUpdateYardOperationSub var1 = new ViewUpdateYardOperationSub(driver);
+			JavascriptExecutor js = (JavascriptExecutor) driver;
+   	 		js.executeScript("arguments[0].scrollIntoView(true);", var1.ScrollDownToSalesStop());
+		}
+
+		@And("^I tick on sales stop check box VUYO$")
+		public void i_tick_on_sales_stop_check_box_vuyo() throws Throwable {
+			Thread.sleep(1000);
+	    	ViewUpdateYardOperationSub var1 = new ViewUpdateYardOperationSub(driver);
+			var1.ClickOnSalesStopCheckBox().click();
+		}
+
+		@And("^I click on Select Stop By link VUYO$")
+		public void i_click_on_select_stop_by_link_vuyo() throws Throwable {
+			Thread.sleep(1000);
+	    	ViewUpdateYardOperationSub var1 = new ViewUpdateYardOperationSub(driver);
+			var1.ClickOnSalesStopByLink().click();
+		}
+
+		@And("^I enter search value in Stop By link VUYO$")
+		public void i_enter_search_value_in_stop_by_link_vuyo() throws Throwable {
+			Thread.sleep(1000);
+	    	ViewUpdateYardOperationSub var1 = new ViewUpdateYardOperationSub(driver);
+			var1.EnterSearchValueInStopByLink().sendKeys("test new");
+		}
+
+		@And("^I select search result in Stop By link VUYO$")
+		public void i_select_search_result_in_stop_by_link_vuyo() throws Throwable {
+			Thread.sleep(1000);
+	    	ViewUpdateYardOperationSub var1 = new ViewUpdateYardOperationSub(driver);
+			var1.ClickOnSearchResultInSalesStopBy().click();
+		}
+
+		@And("^I enter Sales Stop Date VUYO$")
+		public void i_enter_sales_stop_date_vuyo() throws Throwable {
+			Thread.sleep(1000);
+	    	ViewUpdateYardOperationSub var1 = new ViewUpdateYardOperationSub(driver);
+			var1.EnterSalesStopDate().click();
+			JavascriptExecutor js = (JavascriptExecutor) driver;
+			js.executeScript("arguments[0].value = ''", var1.EnterSalesStopDate());
+			var1.EnterSalesStopDate().sendKeys("2023-01-10");
+		}
+
+		@And("^I select Sales Stop Reason VUYO$")
+		public void i_select_sales_stop_reason_vuyo() throws Throwable {
+			Thread.sleep(1000);
+	    	ViewUpdateYardOperationSub var1 = new ViewUpdateYardOperationSub(driver);
+			var1.ClickOnDropdownStopReson().click();
+			Thread.sleep(2000);
+			var1.SelectClientAgreed().click();
+		}
+
+		@And("^I click never expire VUYO$")
+    	public void i_click_never_expire_vuyo() throws Throwable {
+			Thread.sleep(1000);
+	    	ViewUpdateYardOperationSub var1 = new ViewUpdateYardOperationSub(driver);
+			var1.ClickOnNeverExpire().click();
+    }
+
+		@And("^I click on Sales Stop Save button VUYO$")
+		public void i_click_on_sales_stop_save_button_vuyo() throws Throwable {
+			Thread.sleep(1000);
+	    	ViewUpdateYardOperationSub var1 = new ViewUpdateYardOperationSub(driver);
+			var1.ClickOnSalesStopSaveBtn().click();
+		}
+
+		@And("^I click on Sales Stop ok button VUYO$")
+		public void i_click_on_sales_stop_ok_button_vuyo() throws Throwable {
+			Thread.sleep(1000);
+	    	ViewUpdateYardOperationSub var1 = new ViewUpdateYardOperationSub(driver);
+			var1.ClickOnSalesStopSaveBtnYes().click();
+		}
+
+		@And("^I scroll down to save with sales stop VUYO$")
+    	public void i_scroll_down_to_save_with_sales_stop_vuyo() throws Throwable {
+        	Thread.sleep(5000);
+	    	ViewUpdateYardOperationSub var1 = new ViewUpdateYardOperationSub(driver);
+			var1.ScrollToSave().click();
+    	}
+
+		@And("^I click yes button in sales stop VUYO$")
+		public void i_click_yes_button_in_sales_stop_vuyo() throws Throwable {
+			Thread.sleep(3000);
+	    	ViewUpdateYardOperationSub var1 = new ViewUpdateYardOperationSub(driver);
+			var1.ClickYesBtnInSalesStop().click();
+			
+		}
+
+
 }
