@@ -17,38 +17,40 @@ public class NewYardInStep extends ClickOnAddNewYardInMain{
 	@Given("I need to navigate Fusion X Loging page CANYI")
 	public void i_need_to_navigate_fusion_x_loging_page_canyi()  throws Throwable {
 		driver=inheritanceCANYI();
-		   driver.get("https://qa-sl.fusionx.biz/web/home/AnRkr/dashboard");
-		   driver.manage().window().maximize();
-		   Thread.sleep(2000); 
-	
-	
+		driver.get("https://qa-sl.fusionx.biz/web/home/AnRkr/dashboard");
+		driver.manage().window().maximize();
+		Thread.sleep(2000); 
 	}
 
 	@When("I enter   <Username> CANYI1")
 	public void i_enter_username_canyi1()throws Throwable {
 		ClickOnAddNewYardInSub var1=new ClickOnAddNewYardInSub(driver);
-		  var1.typeUserName().sendKeys("LakshaniMa@lolctech.com");;
-		  Thread.sleep(2000);
+		var1.typeUserName().sendKeys("LakshaniMa@lolctech.com");
+		Thread.sleep(2000);
 	}
 	
-
 	@When("I click continue button  CANYI")
 	public void i_click_continue_button_canyi()  throws Throwable {
 		ClickOnAddNewYardInSub var1=new ClickOnAddNewYardInSub(driver); 
 		var1.clickContinueButton().click();
 		Thread.sleep(2000); 
 	}
+	
+	
+	
 	@When("I enter CANYI <Password> CANYI")
 	public void i_enter_canyi_password_canyi() throws Throwable {
 		 ClickOnAddNewYardInSub var1=new ClickOnAddNewYardInSub(driver);
-		    var1.typePassword().sendKeys("Hecember@1234");
-		    Thread.sleep(2000);
+		 var1.typePassword().sendKeys("Hecember@1234");
+		 Thread.sleep(2000);
 	}
+	
 	@When("I click the sign in button CANYI")
 	public void i_click_the_sign_in_button_canyi() throws Throwable {
 		ClickOnAddNewYardInSub var1=new ClickOnAddNewYardInSub(driver);
 		var1.clicksubmit().click();
 	}
+	
 	@When("I click Yard Management CANYI")
 	public void i_click_yard_management_canyi()  throws Throwable {
 		List<String> browserTabs = Lists.newArrayList(driver.getWindowHandles());
@@ -525,7 +527,7 @@ public class NewYardInStep extends ClickOnAddNewYardInMain{
 	    @When("I Enter The Remark")
 	    public void i_enter_the_remark() throws Throwable {
 	    	ClickOnAddNewYardInSub var1=new ClickOnAddNewYardInSub(driver);
-			 var1.EnterTheRemark().sendKeys("aaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaa");
+			 var1.EnterTheRemark().sendKeys("Test Remark");
 			 Thread.sleep(2000);
 	    }
 
