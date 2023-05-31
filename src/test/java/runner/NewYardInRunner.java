@@ -8,7 +8,7 @@ import io.cucumber.junit.Cucumber;
 @RunWith(Cucumber.class)
 @CucumberOptions(
 		features = "src\\test\\java\\feature",
-		glue = "stepDefinition",tags="@Clickon_Settlement_Letter_Print")
+		glue = "stepDefinition",tags="@Clickon_Add_New_Yard_In")
 public class NewYardInRunner {
 
 }
