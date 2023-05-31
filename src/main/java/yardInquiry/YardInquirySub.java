@@ -69,7 +69,6 @@ public WebDriver driver;
 	}
 	
 	public WebElement SearchContractNo()
-	
 	{
 		By var_SearchContractNo = By.xpath("//*[@id=\"root\"]/div/div/div[2]/div/div/div/div[2]/div/div/div[1]/div/div/div[1]/span/input");
 		return driver.findElement( var_SearchContractNo);
@@ -122,6 +121,7 @@ public WebDriver driver;
 		By var_search_button = By.xpath("//*[@id=\"root\"]/div/div/div[2]/div/div/div/div[2]/div/div/div[1]/div/div/div[3]/button");
 		return driver.findElement(var_search_button);
 	}
+	
 	public WebElement  ScrolWithUserName()
 	{
 		By var_ScrolWithUserName = By.xpath("/html/body/div[4]/div/div[2]/div/div[2]/div[1]/div/div/div/div/div/div");
@@ -144,5 +144,11 @@ public WebDriver driver;
 	{
 		By var_yard = By.xpath("/html/body/div[3]/div/div[2]/div/div[2]/div[1]/div/div/div/div/div/div/table/tbody/tr[2]/td[6]/div/div/button");
 		return driver.findElement(var_yard);
+	}
+	
+	public WebElement clickStatusHistoryButton()
+	{
+		By var_clickStatusHistoryButton = By.xpath("//*[@id=\"root\"]/div/div/div[2]/div/div/div/div[2]/div/div/div[2]/button");
+		return driver.findElement(var_clickStatusHistoryButton);
 	}
 }

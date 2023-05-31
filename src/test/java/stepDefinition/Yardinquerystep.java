@@ -195,4 +195,11 @@ public void click_the_select_button_yi() throws Throwable
 	YardInquirySub var1=new YardInquirySub(driver);
 	var1.clickSelectButton().click();  
 }
+
+@And("^click on status history YI$")
+public void click_on_status_history_yi() throws Throwable {
+	Thread.sleep(2000);
+	YardInquirySub var1=new YardInquirySub(driver);
+	var1.clickStatusHistoryButton().click();
+}
 }
