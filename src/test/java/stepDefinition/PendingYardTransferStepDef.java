@@ -1,8 +1,12 @@
 package stepDefinition;
 
+import java.io.File;
+import java.io.InputStream;
+import java.net.URL;
 import java.util.List;
 import java.util.concurrent.TimeUnit;
 
+import org.apache.commons.io.FileUtils;
 import org.openqa.selenium.JavascriptExecutor;
 
 import com.beust.jcommander.internal.Lists;
@@ -178,26 +182,17 @@ public class PendingYardTransferStepDef extends PendingYardTransferMain {
 
     @And("^I upload a file PYT$")
     public void i_upload_a_file_pyt() throws Throwable {
-        Thread.sleep(1000);
-        String filePath = "C:\\Users\\ThiwankaRa\\Documents\\Testing Files - Do Not Delete\\Files\\test.pdf";
-        PendingYardTransferSub var1 = new PendingYardTransferSub(driver);
-        var1.ClickToUploadFile().sendKeys(filePath);
-        Thread.sleep(1000);
-    }
-
-//     @And("^I upload a file PYT$")
-//     public void i_upload_a_file_pyt() throws Throwable {
-//     Thread.sleep(1000);
-//     String fileURL = "https://www.orimi.com/pdf-test.pdf";
-//     URL url = new URL(fileURL);
-//     InputStream inputStream = url.openStream();
-//     File tempFile = File.createTempFile("temp", ".pdf");
-//     FileUtils.copyInputStreamToFile(inputStream, tempFile);
-//     String filePath = tempFile.getAbsolutePath();
-//     PendingYardTransferSub var1 = new PendingYardTransferSub(driver);
-//     var1.ClickToUploadFile().sendKeys(filePath);
-//     Thread.sleep(1000);
-// }
+    Thread.sleep(1000);
+    String fileURL = "https://www.orimi.com/pdf-test.pdf";
+    URL url = new URL(fileURL);
+    InputStream inputStream = url.openStream();
+    File tempFile = File.createTempFile("temp", ".pdf");
+    FileUtils.copyInputStreamToFile(inputStream, tempFile);
+    String filePath = tempFile.getAbsolutePath();
+    PendingYardTransferSub var1 = new PendingYardTransferSub(driver);
+    var1.ClickToUploadFile().sendKeys(filePath);
+    Thread.sleep(1000);
+}
 
     @And("^I enter remarks PYT$")
     public void i_enter_remarks_pyt() throws Throwable {

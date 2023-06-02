@@ -8,7 +8,7 @@ import io.cucumber.junit.CucumberOptions;
 @RunWith(Cucumber.class)
 @CucumberOptions(
 		features = "src/test/java/feature",
-		glue = "stepDefinition" , tags="@click_on_edit_yard_operation_with_insurance_details")
-public class ViewUpdateYardOperationRunner {
+		glue = "stepDefinition" , tags="@click_on_Reselling_Price_Update")
+public class ResellingPriceUpdateRunner {
 
 }

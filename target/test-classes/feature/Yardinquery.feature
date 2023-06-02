@@ -16,6 +16,7 @@ Feature: I want to navigate Yard Inquery
     And I press the search button YI
     And User need to scroll div YI
     And Click the select button YI
+    And click on status history YI
   
     
      @search_contract_Number

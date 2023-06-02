@@ -9,10 +9,6 @@ public class YardInquiryMain {
 	public WebDriver inheritance2() 
 	{
 		System.setProperty("webdriver.chrome.driver", "C:\\\\Users\\\\ThiwankaRa\\\\Downloads\\\\CucumberBDDPro\\\\ChromeDriver\\\\chromedriver.exe");
-		 
-	
-		
-		
 		ChromeOptions options = new ChromeOptions();
 		options.addArguments("--remote-allow-origins=*");
 		WebDriver driver = new ChromeDriver(options);

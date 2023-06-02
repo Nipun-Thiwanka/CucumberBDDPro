@@ -1,7 +1,12 @@
 package stepDefinition;
 
+import java.io.File;
+import java.io.InputStream;
+import java.net.URL;
 import java.util.List;
 import java.util.concurrent.TimeUnit;
+
+import org.apache.commons.io.FileUtils;
 import org.openqa.selenium.JavascriptExecutor;
 import org.openqa.selenium.WebElement;
 
@@ -341,10 +346,15 @@ public class NewYardInStep extends ClickOnAddNewYardInMain{
 	    	var1. UpdateClickTheExportCheckList().click();
 	   }
 
-	    @And("^I Click The Click to Upload CANYIU$")
+		@And("^I Click The Click to Upload CANYIU$")
 	    public void i_click_the_click_to_upload_canyiu() throws Throwable {
-	    	Thread.sleep(3000);
-	    	String filePath = "C:\\Users\\ThiwankaRa\\Documents\\Testing Files - Do Not Delete\\Files\\test.pdf";
+	    	Thread.sleep(1000);
+			String fileURL = "https://www.orimi.com/pdf-test.pdf";
+			URL url = new URL(fileURL);
+			InputStream inputStream = url.openStream();
+			File tempFile = File.createTempFile("temp", ".pdf");
+			FileUtils.copyInputStreamToFile(inputStream, tempFile);
+			String filePath = tempFile.getAbsolutePath();
 	    	ClickOnAddNewYardInSub var1=new ClickOnAddNewYardInSub(driver);
 	    	var1.FileUpload().sendKeys(filePath);
 	   }
@@ -498,10 +508,15 @@ public class NewYardInStep extends ClickOnAddNewYardInMain{
 	        var1.ClickTheExportCheckLists().click();
 	    }
 
-	    @When("I Click The Click to Upload CANYI")
+		@When("I Click The Click to Upload CANYI")
 	    public void i_click_the_click_to_upload_canyi()throws Throwable {
-	    	Thread.sleep(3000);
-	    	String filePath = "C:\\Users\\ThiwankaRa\\Documents\\Testing Files - Do Not Delete\\Files\\test.pdf";
+	    	Thread.sleep(1000);
+			String fileURL = "https://www.orimi.com/pdf-test.pdf";
+			URL url = new URL(fileURL);
+			InputStream inputStream = url.openStream();
+			File tempFile = File.createTempFile("temp", ".pdf");
+			FileUtils.copyInputStreamToFile(inputStream, tempFile);
+			String filePath = tempFile.getAbsolutePath();
 	    	ClickOnAddNewYardInSub var1=new ClickOnAddNewYardInSub(driver);
 	    	var1.FileUpload().sendKeys(filePath);
 	    }

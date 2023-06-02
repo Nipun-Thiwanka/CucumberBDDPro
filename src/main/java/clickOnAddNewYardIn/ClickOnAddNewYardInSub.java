@@ -41,7 +41,7 @@ public class ClickOnAddNewYardInSub extends ClickOnAddNewYardInMain {
 	}
 	public WebElement clickYardManagement()
 	{
-		By var_clickYardManagement = By.xpath("//*[@id=\"root\"]/div/div[2]/div/div/div/div/div/div[2]/div[8]/div/div[1]");
+		By var_clickYardManagement = By.xpath("//*[@id=\"root\"]/div/div[2]/div/div/div/div/div/div[2]/div[8]/div");
 		return driver.findElement(var_clickYardManagement);
 	}
 	public WebElement clickYardIn()
