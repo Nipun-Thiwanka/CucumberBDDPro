@@ -13,3 +13,12 @@ Feature: Reselling Price Update
     And I click Yard Management option RPU
     And I click on Post Yard Management RPU
     And I select Reselling Price Update RPU
+    And I enter Yard In Date From RPU
+    And I enter Yard In Date To RPU
+    And I enter vehicle number RPU
+    And I click search button RPU
+    And I scroll div horizontally RPU
+    And I click update button RPU
+    And I scroll down to save RPU
+    And I click save button RPU
+    And I click ok button RPU
