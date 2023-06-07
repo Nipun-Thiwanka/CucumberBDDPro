@@ -1,5 +1,5 @@
-@Pending_Yard_Transfer
-Feature: Pending Yard Transfer
+@Yard_Transfer
+Feature: Yard Transfer
   I want go to Yard Transfer
 
   @click_on_pending_yard_transfer_view_details
