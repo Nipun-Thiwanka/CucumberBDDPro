@@ -1,14 +1,15 @@
 package stepDefinition;
 
+import java.io.File;
+import java.io.InputStream;
+import java.net.URL;
 import java.util.List;
 import java.util.concurrent.TimeUnit;
-
+import java.time.Duration;
+import java.util.concurrent.TimeUnit;
+import org.apache.commons.io.FileUtils;
 import org.openqa.selenium.JavascriptExecutor;
-import org.openqa.selenium.WebElement;
-
 import com.beust.jcommander.internal.Lists;
-import org.openqa.selenium.interactions.Actions;
-
 import addNewYardOperation.AddNewYardOperationMain;
 import addNewYardOperation.AddNewYardOperationSub;
 import io.cucumber.java.en.And;
@@ -120,8 +121,13 @@ public class AddNewYardOperationStepDef extends AddNewYardOperationMain {
     
     @And("^I upload an image ANYO$")
     public void i_upload_an_image_anyo() throws Throwable {
-    	Thread.sleep(2000);
-    	String imgPath = "C:\\Users\\ThiwankaRa\\Documents\\Testing Files - Do Not Delete\\Images\\test.png";
+    	Thread.sleep(1000);
+		String fileURL = "https://www.kasandbox.org/programming-images/avatars/leaf-blue.png";
+		URL url = new URL(fileURL);
+		InputStream inputStream = url.openStream();
+		File tempFile = File.createTempFile("temp", ".png");
+		FileUtils.copyInputStreamToFile(inputStream, tempFile);
+		String imgPath = tempFile.getAbsolutePath();
     	AddNewYardOperationSub var1=new AddNewYardOperationSub(driver);
     for (int i = 0; i < 5; i++) {
 		var1.ClickToUploadImg().sendKeys(imgPath);}
@@ -129,8 +135,13 @@ public class AddNewYardOperationStepDef extends AddNewYardOperationMain {
     
     @And("^I upload a file ANYO$")
     public void i_upload_a_file_anyo() throws Throwable {
-    	Thread.sleep(5000);
-    	String filePath = "C:\\Users\\ThiwankaRa\\Documents\\Testing Files - Do Not Delete\\Files\\test.pdf";
+    	Thread.sleep(1000);
+        String fileURL = "https://www.orimi.com/pdf-test.pdf";
+        URL url = new URL(fileURL);
+        InputStream inputStream = url.openStream();
+        File tempFile = File.createTempFile("temp", ".pdf");
+        FileUtils.copyInputStreamToFile(inputStream, tempFile);
+        String filePath = tempFile.getAbsolutePath();
     	AddNewYardOperationSub var1=new AddNewYardOperationSub(driver);
 		var1.ClickToUploadFile().sendKeys(filePath);
     }
