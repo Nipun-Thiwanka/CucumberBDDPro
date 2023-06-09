@@ -1,8 +1,12 @@
 package stepDefinition;
 
+import java.io.File;
+import java.io.InputStream;
+import java.net.URL;
 import java.util.List;
 import java.util.concurrent.TimeUnit;
 
+import org.apache.commons.io.FileUtils;
 import org.openqa.selenium.JavascriptExecutor;
 
 import com.beust.jcommander.internal.Lists;
@@ -127,8 +131,13 @@ public class ViewUpdateYardOperationStepDef extends ViewUpdateYardOperationMain 
 
 	    @And("^I upload an image VUYO$")
 	    public void i_upload_an_image_vuyo() throws Throwable {
-	        Thread.sleep(2000);
-			String imgPath = "C:\\Users\\ThiwankaRa\\Documents\\Testing Files - Do Not Delete\\Images\\test.png";
+	        Thread.sleep(1000);
+			String fileURL = "https://www.kasandbox.org/programming-images/avatars/leaf-blue.png";
+			URL url = new URL(fileURL);
+			InputStream inputStream = url.openStream();
+			File tempFile = File.createTempFile("temp", ".png");
+			FileUtils.copyInputStreamToFile(inputStream, tempFile);
+			String imgPath = tempFile.getAbsolutePath();
 			ViewUpdateYardOperationSub var1=new ViewUpdateYardOperationSub(driver);
 			var1.ClickToUploadImg().sendKeys(imgPath);
    		 }
@@ -136,8 +145,13 @@ public class ViewUpdateYardOperationStepDef extends ViewUpdateYardOperationMain 
 
 	    @And("^I upload a file VUYO$")
 	    public void i_upload_a_file_vuyo() throws Throwable {
-	    Thread.sleep(2000);
-			String filePath = "C:\\Users\\ThiwankaRa\\Documents\\Testing Files - Do Not Delete\\Files\\test.pdf";
+			Thread.sleep(1000);
+			String fileURL = "https://www.orimi.com/pdf-test.pdf";
+			URL url = new URL(fileURL);
+			InputStream inputStream = url.openStream();
+			File tempFile = File.createTempFile("temp", ".pdf");
+			FileUtils.copyInputStreamToFile(inputStream, tempFile);
+			String filePath = tempFile.getAbsolutePath();
 			ViewUpdateYardOperationSub var1=new ViewUpdateYardOperationSub(driver);
 			var1.ClickToUploadFile().sendKeys(filePath);
 	    }
