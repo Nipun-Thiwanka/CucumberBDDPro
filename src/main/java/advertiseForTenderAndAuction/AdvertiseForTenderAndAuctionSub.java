@@ -159,7 +159,7 @@ public class AdvertiseForTenderAndAuctionSub extends AdvertiseForTenderAndAuctio
 
 	public WebElement ClickOnOkButton()
 	{
-		By var_ClickOnOkButton = By.xpath("/html/body/div[9]/div/div[2]/div/div[2]/div/div/div[2]/button[1]");
+		By var_ClickOnOkButton = By.xpath("/html/body/div[9]/div/div[2]/div/div[2]/div/div/div[2]/button[2]");
 		return driver.findElement(var_ClickOnOkButton);
 	}
 }
