@@ -47,7 +47,8 @@ public class OfferDetailsEntryStepDef extends OfferDetailsEntryMain {
     }
 
     @When("I click the sign in button OED")
-    public void i_click_the_sign_in_button_oed()  {
+    public void i_click_the_sign_in_button_oed() throws InterruptedException  {
+    	Thread.sleep(3000);
         OfferDetailsEntrySub var1 = new OfferDetailsEntrySub(driver);
         var1.clicksubmit().click();
     }
@@ -55,7 +56,7 @@ public class OfferDetailsEntryStepDef extends OfferDetailsEntryMain {
 
     @When("I click Yard Management option OED")
     public void i_click_yard_management_option_oed()  throws InterruptedException {
-    	Thread.sleep(2000);
+    	Thread.sleep(5000);
     	OfferDetailsEntrySub var1 = new OfferDetailsEntrySub(driver);
     	JavascriptExecutor js = (JavascriptExecutor) driver;
    	 	js.executeScript("arguments[0].scrollIntoView(true);", var1.scrollToYardManagement());
