@@ -385,4 +385,37 @@ public WebDriver driver;
 		return driver.findElement(var_ScrollToFill);
 	}
 	
+//	SelectReleaseApproval
+	
+	public WebElement SelectReleaseApproval()
+	{
+		By var_SelectReleaseApproval= By.xpath("//*[@id=\"/AnRkr/yard-release$Menu\"]/li[3]");
+		return driver.findElement(var_SelectReleaseApproval);
+	}
+	
+	public WebElement VehicleNu()
+	{
+		By var_VehicleNu= By.xpath("//*[@id=\"root\"]/div/div/div[2]/div/div/div/div[2]/div/div/div/div/div[1]/div/div[1]/span/input");
+		return driver.findElement(var_VehicleNu);
+	}
+	
+	public WebElement scrollToTick()
+	{
+		By var_scrollToTick= By.xpath("//*[@id=\"root\"]/div/div/div[2]/div/div/div/div[2]/div/div/div/div/div[2]/div/div[1]/div/div/div/div/div");
+		return driver.findElement(var_scrollToTick);
+	}
+	
+	public WebElement TickOnApproveCheckbox()
+	{
+		By var_TickOnApproveCheckbox= By.xpath("//*[@id=\"root\"]/div/div/div[2]/div/div/div/div[2]/div/div/div/div/div[2]/div/div[1]/div/div/div/div/div/table/tbody/tr[2]/td[11]/div/div/label/span/input");
+		return driver.findElement(var_TickOnApproveCheckbox);
+	}
+	
+	public WebElement ClickSave()
+	{
+		By var_ClickSave= By.xpath("//*[@id=\"root\"]/div/div/div[2]/div/div/div/div[2]/div/div/div/div/div[2]/div/div[2]/div/button[2]");
+		return driver.findElement(var_ClickSave);
+	}
+	
+	
 }

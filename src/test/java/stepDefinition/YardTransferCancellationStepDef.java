@@ -40,7 +40,7 @@ public class YardTransferCancellationStepDef extends YardTransferCancellationMai
     public void i_enter_ytca(String password) throws Throwable {
         Thread.sleep(1000);
         YardTransferCancellationSub var1 = new YardTransferCancellationSub(driver);
-        var1.typePassword().sendKeys("Hecember@1234");
+        var1.typePassword().sendKeys("September@1234");
     }
 
     @And("^I click the sign in button YTCa$")

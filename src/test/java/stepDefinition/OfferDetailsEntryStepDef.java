@@ -43,7 +43,7 @@ public class OfferDetailsEntryStepDef extends OfferDetailsEntryMain {
     @When("I enter OED <Password>")
     public void i_enter_oed_password() {
         OfferDetailsEntrySub var1 = new OfferDetailsEntrySub(driver);
-        var1.typePassword().sendKeys("Hecember@1234");
+        var1.typePassword().sendKeys("September@1234");
     }
 
     @When("I click the sign in button OED")

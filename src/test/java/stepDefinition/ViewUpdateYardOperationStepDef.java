@@ -43,7 +43,7 @@ public class ViewUpdateYardOperationStepDef extends ViewUpdateYardOperationMain 
 	    @And("^I enter VUYO (.+)$")
 	    public void i_enter_vuyo(String password) throws Throwable {
 	    	ViewUpdateYardOperationSub var1 = new ViewUpdateYardOperationSub(driver);
-	    	var1.typePassword().sendKeys("Hecember@1234");
+	    	var1.typePassword().sendKeys("September@1234");
 	    }
 
 	    @And("^I click the sign in button VUYO$")
@@ -54,9 +54,12 @@ public class ViewUpdateYardOperationStepDef extends ViewUpdateYardOperationMain 
 
 	    @And("^I click Yard Management option VUYO$")
 	    public void i_click_yard_management_option_vuyo() throws Throwable {
-	    	List<String> browserTabs = Lists.newArrayList(driver.getWindowHandles());
-			Thread.sleep(5000);
+	    	Thread.sleep(5000);
 			ViewUpdateYardOperationSub var1 = new ViewUpdateYardOperationSub(driver);
+			JavascriptExecutor js = (JavascriptExecutor) driver;
+	   	 	js.executeScript("arguments[0].scrollIntoView(true);", var1.scrollToYardManagement());
+			List<String> browserTabs = Lists.newArrayList(driver.getWindowHandles());
+			Thread.sleep(5000);
 			var1.clickYardManagement().click();
 			Thread.sleep(5000);
 	    }

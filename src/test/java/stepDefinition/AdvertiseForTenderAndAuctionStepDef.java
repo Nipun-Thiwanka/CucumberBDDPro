@@ -40,7 +40,7 @@ public class AdvertiseForTenderAndAuctionStepDef extends AdvertiseForTenderAndAu
     @When("I enter AFTnA <Password>")
     public void i_enter_af_tn_a_password() {
         AdvertiseForTenderAndAuctionSub var1 = new AdvertiseForTenderAndAuctionSub(driver);
-        var1.typePassword().sendKeys("Hecember@1234");
+        var1.typePassword().sendKeys("September@1234");
     }
 
     @When("I click the sign in button AFTnA")
@@ -51,10 +51,13 @@ public class AdvertiseForTenderAndAuctionStepDef extends AdvertiseForTenderAndAu
 
     @When("I click Yard Management option AFTnA")
     public void i_click_yard_management_option_af_tn_a() throws InterruptedException {
-        List<String> browserTabs = Lists.newArrayList(driver.getWindowHandles());
-		Thread.sleep(5000);
+    	Thread.sleep(5000);
         AdvertiseForTenderAndAuctionSub var1 = new AdvertiseForTenderAndAuctionSub(driver);
-        var1.clickYardManagement().click();
+        JavascriptExecutor js = (JavascriptExecutor) driver;
+   	 	js.executeScript("arguments[0].scrollIntoView(true);", var1.scrollToYardManagement());
+		List<String> browserTabs = Lists.newArrayList(driver.getWindowHandles());
+		Thread.sleep(5000);
+		var1.clickYardManagement().click();
 		Thread.sleep(5000);
     }
 
@@ -78,7 +81,7 @@ public class AdvertiseForTenderAndAuctionStepDef extends AdvertiseForTenderAndAu
     public void i_enter_branch_af_tn_a() throws InterruptedException {
         Thread.sleep(2000);
         AdvertiseForTenderAndAuctionSub var1 = new AdvertiseForTenderAndAuctionSub(driver);
-        var1.EnterBranch().sendKeys("TRINCOMALEE");
+        var1.EnterBranch().sendKeys("");
     }
 
     @When("I select Advertised Status AFTnA")
@@ -94,7 +97,7 @@ public class AdvertiseForTenderAndAuctionStepDef extends AdvertiseForTenderAndAu
     public void i_enter_vehicle_number_af_tn_a() throws InterruptedException {
         Thread.sleep(2000);
         AdvertiseForTenderAndAuctionSub var1 = new AdvertiseForTenderAndAuctionSub(driver);
-        var1.EnterVehicleNumber().sendKeys("AAB9776");
+        var1.EnterVehicleNumber().sendKeys("HW2527");
     }
 
     @When("I click search button AFTnA")
@@ -117,14 +120,14 @@ public class AdvertiseForTenderAndAuctionStepDef extends AdvertiseForTenderAndAu
     public void i_enter_advertise_date_af_tn_a() throws InterruptedException {
         Thread.sleep(2000);
         AdvertiseForTenderAndAuctionSub var1 = new AdvertiseForTenderAndAuctionSub(driver);
-        var1.AdvertiseDate().sendKeys("2023-02-07");
+        var1.AdvertiseDate().sendKeys("2017-07-12");
     }
 
     @When("I enter auction date AFTnA")
     public void i_enter_auction_date_af_tn_a() throws InterruptedException {
         Thread.sleep(2000);
         AdvertiseForTenderAndAuctionSub var1 = new AdvertiseForTenderAndAuctionSub(driver);
-        var1.AuctionDate().sendKeys("2024-02-07");
+        var1.AuctionDate().sendKeys("2023-07-05");
     }
 
     @When("I click approval user button AFTnA")
@@ -138,7 +141,7 @@ public class AdvertiseForTenderAndAuctionStepDef extends AdvertiseForTenderAndAu
     public void i_enter_approval_user_name_af_tn_a() throws InterruptedException {
         Thread.sleep(2000);
         AdvertiseForTenderAndAuctionSub var1 = new AdvertiseForTenderAndAuctionSub(driver);
-        var1.EnterApprovalUser().sendKeys("Theeksha Dumini");
+        var1.EnterApprovalUser().sendKeys("Lakshani Madushik");
     }
 
     @When("I scroll horizontally approval user div AFTnA")

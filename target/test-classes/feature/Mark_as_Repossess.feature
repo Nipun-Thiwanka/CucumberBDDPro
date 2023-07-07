@@ -46,7 +46,7 @@ Feature: Mark as Repossess/Seized
     And User Select ok with contract num1
     
   @search_by_chassis_number_in_Mark_as_Repossess
-  Scenario: Update the status of vehicle with contract number
+  Scenario: Update the status of vehicle with chassis number
     Given I need to navigate LOLC FusionX Loging page1
     When I enter1 <Username>
     And I click continue button1
@@ -68,7 +68,7 @@ Feature: Mark as Repossess/Seized
     And User Select ok with contract num1
     
   @search_by_serial_number_in_Mark_as_Repossess
-  Scenario: Update the status of vehicle with contract number
+  Scenario: Update the status of vehicle with serial number
     Given I need to navigate LOLC FusionX Loging page1
     When I enter1 <Username>
     And I click continue button1
@@ -90,7 +90,7 @@ Feature: Mark as Repossess/Seized
     And User Select ok with contract num1
     
   @search_by_Repossess_order_number_in_Mark_as_Repossess
-  Scenario: Update the status of vehicle with contract number
+  Scenario: Update the status of vehicle with Repossess number
     Given I need to navigate LOLC FusionX Loging page1
     When I enter1 <Username>
     And I click continue button1

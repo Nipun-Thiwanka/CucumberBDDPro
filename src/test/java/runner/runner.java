@@ -8,7 +8,7 @@ import io.cucumber.junit.CucumberOptions;
 @RunWith(Cucumber.class)
 @CucumberOptions(
 		features = "src/test/java/feature",
-		glue = "stepDefinition" , tags="@Click_on_Hand_Over")
+		glue = "stepDefinition" , tags="@search_by_vehicle_number")
 public class runner {
 
 }

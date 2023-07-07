@@ -37,7 +37,7 @@ public class ResellingPriceUpdateStepDef extends ResellingPriceUpdateMain{
     @And("^I enter RPU (.+)$")
     public void i_enter_rpu(String password) throws Throwable {
         ResellingPriceUpdateSub var1 = new ResellingPriceUpdateSub(driver);
-        var1.typePassword().sendKeys("Hecember@1234");
+        var1.typePassword().sendKeys("September@1234");
     }
 
     @And("^I click the sign in button RPU$")
@@ -48,10 +48,13 @@ public class ResellingPriceUpdateStepDef extends ResellingPriceUpdateMain{
 
     @And("^I click Yard Management option RPU$")
     public void i_click_yard_management_option_rpu() throws Throwable {
-        List<String> browserTabs = Lists.newArrayList(driver.getWindowHandles());
-		Thread.sleep(5000);
+    	Thread.sleep(5000);
         ResellingPriceUpdateSub var1 = new ResellingPriceUpdateSub(driver);
-        var1.clickYardManagement().click();
+        JavascriptExecutor js = (JavascriptExecutor) driver;
+   	 	js.executeScript("arguments[0].scrollIntoView(true);", var1.scrollToYardManagement());
+		List<String> browserTabs = Lists.newArrayList(driver.getWindowHandles());
+		Thread.sleep(5000);
+		var1.clickYardManagement().click();
 		Thread.sleep(5000);
     }
 

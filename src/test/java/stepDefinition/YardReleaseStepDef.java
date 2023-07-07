@@ -109,7 +109,7 @@ public class YardReleaseStepDef extends YardReleaseMain{
 	public void i_search_vehicle_number_yr() throws InterruptedException{
 	    Thread.sleep(2000);
 		YardReleaseSub var1 = new YardReleaseSub(driver);
-		var1.enterVehicleNum().sendKeys("QB9335");
+		var1.enterVehicleNum().sendKeys("YC3818");
 		Thread.sleep(2000);
 		var1.ClickSearchBtn().click();
 	}
@@ -391,6 +391,38 @@ public class YardReleaseStepDef extends YardReleaseMain{
    	    var1.ReceiptNo().sendKeys("1234");
 	}
 
+//Release Approval
+
+	@When("I select Release Approval RA")
+	public void i_select_release_approval_ra() throws InterruptedException{
+	    Thread.sleep(2000);
+		YardReleaseSub var1 = new YardReleaseSub(driver);
+		var1.SelectReleaseApproval().click();
+	}
+
+	@When("I search by vehicle number RA")
+	public void i_search_by_vehicle_number_ra() throws InterruptedException {
+		Thread.sleep(2000);
+		YardReleaseSub var1 = new YardReleaseSub(driver);
+		var1.VehicleNu().sendKeys("QW4820");
+	}
+	
+	@When("I tick on approve check box RA")
+	public void i_tick_on_approve_check_box_ra() throws InterruptedException {
+		Thread.sleep(2000);
+		YardReleaseSub var1 = new YardReleaseSub(driver);
+		JavascriptExecutor js = (JavascriptExecutor) driver;
+        js.executeScript("arguments[0].scrollLeft = arguments[0].scrollWidth", var1.scrollToTick());
+        Thread.sleep(2000);
+        var1.TickOnApproveCheckbox().click();
+	}
+	
+	@When("I click save button RA")
+	public void i_click_save_button_ra() throws InterruptedException {
+		Thread.sleep(2000);
+		YardReleaseSub var1 = new YardReleaseSub(driver);
+		var1.ClickSave().click();
+	}
 
 
 

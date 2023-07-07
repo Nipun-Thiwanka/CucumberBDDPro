@@ -35,7 +35,7 @@ public class OfferConfirmationStepDef extends OfferConfirmationMain {
     @When("I enter OC <Password>")
     public void i_enter_oc_password() {
         OfferConfirmationSub var1 = new OfferConfirmationSub(driver);
-        var1.typePassword().sendKeys("Hecember@1234");
+        var1.typePassword().sendKeys("September@1234");
     }
 
     @When("I click the sign in button OC")
@@ -54,7 +54,7 @@ public class OfferConfirmationStepDef extends OfferConfirmationMain {
         List<String> browserTabs = Lists.newArrayList(driver.getWindowHandles());
 		Thread.sleep(5000);
         var1.clickYardManagement().click();
-		Thread.sleep(5000);
+		Thread.sleep(10000);
     }
 
     @When("I click on Post Yard Management OC")

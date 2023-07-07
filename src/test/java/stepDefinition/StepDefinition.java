@@ -49,7 +49,7 @@ public class StepDefinition extends Base {
 	@When("I enter <Password>")
 	public void i_enter_password() {
 		Landing var1=new Landing(driver);
-	    var1.typePassword().sendKeys("Hecember@1234");
+	    var1.typePassword().sendKeys("September@1234");
 	}
 
 	@When("I click the sign in button")
@@ -62,12 +62,14 @@ public class StepDefinition extends Base {
 	@And("^I click Yard in option$")
     public void i_click_yard_in_option() throws Throwable
 	{
-		List<String> browserTabs = Lists.newArrayList(driver.getWindowHandles());
 		Thread.sleep(5000);
 		Landing var1=new Landing(driver);
+		JavascriptExecutor js = (JavascriptExecutor) driver;
+   	 	js.executeScript("arguments[0].scrollIntoView(true);", var1.scrollToYardManagement());
+		List<String> browserTabs = Lists.newArrayList(driver.getWindowHandles());
+		Thread.sleep(5000);
 		var1.clickYardIn().click();
-		Thread.sleep(2000);
-		
+		Thread.sleep(5000);
     }
 	@And("^I click on Mark as Seized$")
     public void i_click_on_mark_as_seized() throws Throwable 
