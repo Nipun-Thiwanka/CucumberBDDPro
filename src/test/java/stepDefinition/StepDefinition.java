@@ -112,6 +112,14 @@ public class StepDefinition extends Base {
 		driver.manage().timeouts().implicitlyWait(10, TimeUnit.SECONDS);
     }
     
+    @And("^I enter search value contract number uat$")
+    public void i_enter_search_valuecontract_number_uat() throws Throwable {
+    	Thread.sleep(2000);
+		Landing var1=new Landing(driver);
+		var1.clickOnSearchBar().sendKeys("C2-02-0008WJ");
+		driver.manage().timeouts().implicitlyWait(10, TimeUnit.SECONDS);
+    }
+    
     @And("^I click on dropdown$")
     public void i_click_on_dropdown() throws Throwable {
     	Thread.sleep(3000);
@@ -158,7 +166,7 @@ public class StepDefinition extends Base {
     
     @And("^I click on of search option$")
     public void i_select_on_of_search_options() throws Throwable {
-    	Thread.sleep(2000);
+    	Thread.sleep(10000);
 		Landing var1=new Landing(driver);
     	var1.selectOnSearchResult().click();
     }

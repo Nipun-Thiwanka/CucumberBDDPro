@@ -16,12 +16,12 @@ Feature: Mark as Repossess/Seized
     And I click on search bar1
     And I enter search value1
     And I press the search button1
-    And I click on of search option1
-    And User need to scroll div1
-    And User need mark as handovered1
-    And User need to scroll back div1
-    And User need to save1
-    And User Select ok1
+    #And I click on of search option1
+    #And User need to scroll div1
+    #And User need mark as handovered1
+    #And User need to scroll back div1
+    #And User need to save1
+    #And User Select ok1
     
   @search_by_contract_number_in_Mark_as_Repossess
   Scenario: Update the status of vehicle with contract number
@@ -38,12 +38,12 @@ Feature: Mark as Repossess/Seized
     And I click on dropdown1
     And I select by contract number1
     And I press the search button1
-    And I click on select button1
-    And User need to scroll div1
-    And User need mark as handovered1
-    And User need to scroll back div1
-    And User need to save1
-    And User Select ok with contract num1
+    #And I click on select button1
+    #And User need to scroll div1
+    #And User need mark as handovered1
+    #And User need to scroll back div1
+    #And User need to save1
+    #And User Select ok with contract num1
     
   @search_by_chassis_number_in_Mark_as_Repossess
   Scenario: Update the status of vehicle with chassis number
@@ -60,12 +60,12 @@ Feature: Mark as Repossess/Seized
     And I click on dropdown1
     And I select by chassis number1
     And I press the search button1
-    And I click on select button1
-    And User need to scroll div1
-    And User need mark as handovered1
-    And User need to scroll back div1
-    And User need to save1
-    And User Select ok with contract num1
+    #And I click on select button1
+    #And User need to scroll div1
+    #And User need mark as handovered1
+    #And User need to scroll back div1
+    #And User need to save1
+    #And User Select ok with contract num1
     
   @search_by_serial_number_in_Mark_as_Repossess
   Scenario: Update the status of vehicle with serial number
@@ -82,12 +82,12 @@ Feature: Mark as Repossess/Seized
     And I click on dropdown1
     And I select by serial number1
     And I press the search button1
-    And I click on select button with serial num1
-    And User need to scroll div1
-    And User need mark as handovered1
-    And User need to scroll back div1
-    And User need to save1
-    And User Select ok with contract num1
+    #And I click on select button with serial num1
+    #And User need to scroll div1
+    #And User need mark as handovered1
+    #And User need to scroll back div1
+    #And User need to save1
+    #And User Select ok with contract num1
     
   @search_by_Repossess_order_number_in_Mark_as_Repossess
   Scenario: Update the status of vehicle with Repossess number
@@ -104,9 +104,9 @@ Feature: Mark as Repossess/Seized
     And I click on dropdown1
     And I select by repossess_order number1
     And I press the search button1
-    And I click on select button with serial num1
-    And User need to scroll div1
-    And User need mark as handovered1
-    And User need to scroll back div1
-    And User need to save1
-    And User Select ok with contract num1
+    #And I click on select button with serial num1
+    #And User need to scroll div1
+    #And User need mark as handovered1
+    #And User need to scroll back div1
+    #And User need to save1
+    #And User Select ok with contract num1

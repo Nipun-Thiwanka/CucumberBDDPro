@@ -39,7 +39,7 @@ public class MarkAsSeizedCancellationStepDef extends MarkAsSeizedCancellationMai
 	@When("I enter2 <Password>")
 	public void i_enter_password2() {
 		MarkAsSeizedCancellationSub var1=new MarkAsSeizedCancellationSub(driver);
-	    var1.typePassword().sendKeys("Hecember@1234");
+	    var1.typePassword().sendKeys("September@1234");
 	}
 
 	@When("I click the sign in button2")
@@ -50,9 +50,12 @@ public class MarkAsSeizedCancellationStepDef extends MarkAsSeizedCancellationMai
 	
 	@And("^I click Yard in option2$")
     public void i_click_yard_in_option2() throws Throwable{
-		List<String> browserTabs = Lists.newArrayList(driver.getWindowHandles());
 		Thread.sleep(5000);
 		MarkAsSeizedCancellationSub var1=new MarkAsSeizedCancellationSub(driver);
+		JavascriptExecutor js = (JavascriptExecutor) driver;
+   	 	js.executeScript("arguments[0].scrollIntoView(true);", var1.scrollToYardManagement());
+		List<String> browserTabs = Lists.newArrayList(driver.getWindowHandles());
+		Thread.sleep(5000);
 		var1.clickYardIn().click();
 		Thread.sleep(5000);
     }

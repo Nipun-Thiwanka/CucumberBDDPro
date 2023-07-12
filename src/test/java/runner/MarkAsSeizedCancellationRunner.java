@@ -8,7 +8,7 @@ import io.cucumber.junit.CucumberOptions;
 @RunWith(Cucumber.class)
 @CucumberOptions(
 		features = "src/test/java/feature",
-		glue = "stepDefinition", tags="@search_by_vehicle_number_in_hand_over_Cancellation")
+		glue = "stepDefinition", tags="@hand_over_Cancellation")
 public class MarkAsSeizedCancellationRunner {
 
 }

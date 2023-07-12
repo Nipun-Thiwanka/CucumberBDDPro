@@ -1,4 +1,4 @@
-@tag
+@hand_over_Cancellation
 Feature: Mark As Seized/Hand over Cancellation
   I want to use this template for my feature file
 

@@ -17,7 +17,7 @@ public class MarkAsRepossessSeizeStepDef extends MarkAsRepossessSeizeMain  {
 	@Given("^I need to navigate LOLC FusionX Loging page1$")
     public void i_need_to_navigate_lolc_fusionx_loging_page1() throws InterruptedException {
 	   driver=inheritance1();
-	   driver.get("https://qa-sl.fusionx.biz/web/home/AnRkr/dashboard");
+	   driver.get("https://uat-sl.fusionx.biz/web/home/AnRkr/dashboard");
 	   driver.manage().window().maximize();
 	   Thread.sleep(2000);
 	}
