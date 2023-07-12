@@ -83,6 +83,40 @@ public class TemporaryReleaseYardInStepDef extends TemporaryReleaseYardInMain {
         JavascriptExecutor js = (JavascriptExecutor) driver;
         js.executeScript("window.scrollTo(0, 0);");
 	}
+	
+	@When("I select Sold and Returns TR")
+	public void i_select_sold_and_returns_tr() throws InterruptedException {
+		Thread.sleep(2000);
+		TemporaryReleaseYardInSub var1 = new TemporaryReleaseYardInSub(driver);
+		var1.SelectSoldAndReturns().click();
+        JavascriptExecutor js = (JavascriptExecutor) driver;
+        js.executeScript("window.scrollTo(0, 0);");
+	}
+	
+	@Given("I search and tick SR")
+	public void i_search_and_tick_sr() throws InterruptedException {
+		Thread.sleep(2000);
+		TemporaryReleaseYardInSub var1 = new TemporaryReleaseYardInSub(driver);
+		var1.enterVehicleNumber().sendKeys("QV5691");
+		Thread.sleep(2000);
+		JavascriptExecutor js = (JavascriptExecutor) driver;
+        js.executeScript("arguments[0].scrollLeft = arguments[0].scrollWidth", var1.scrollToClick());
+        Thread.sleep(2000);
+        var1.TickOnCheckBox().click();
+        var1.EnterRemark().sendKeys("Test Remark");
+	}
+	
+	@Given("I click save button")
+	public void i_click_save_button() throws InterruptedException {
+		Thread.sleep(2000);
+		TemporaryReleaseYardInSub var1 = new TemporaryReleaseYardInSub(driver);
+		var1.ClickSaveButton().click();
+		Thread.sleep(2000);
+		var1.ClickOkButton().click();
+	}
+
+
+
 
 
 

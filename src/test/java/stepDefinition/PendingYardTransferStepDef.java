@@ -38,7 +38,7 @@ public class PendingYardTransferStepDef extends PendingYardTransferMain {
     @And("^I enter PYT (.+)$")
     public void i_enter_pyt(String password) throws Throwable {
         PendingYardTransferSub var1 = new PendingYardTransferSub(driver);
-        var1.typePassword().sendKeys("Hecember@1234");
+        var1.typePassword().sendKeys("September@1234");
     }
 
     @And("^I click the sign in button PYT$")
@@ -49,11 +49,14 @@ public class PendingYardTransferStepDef extends PendingYardTransferMain {
 
     @And("^I click Yard Management option PYT$")
     public void i_click_yard_management_option_pyt() throws Throwable {
+    	Thread.sleep(5000);
+        PendingYardTransferSub var1 = new PendingYardTransferSub(driver);
+        JavascriptExecutor js = (JavascriptExecutor) driver;
+   	 	js.executeScript("arguments[0].scrollIntoView(true);", var1.scrollToYardManagement());
         List<String> browserTabs = Lists.newArrayList(driver.getWindowHandles());
 		Thread.sleep(5000);
-        PendingYardTransferSub var1 = new PendingYardTransferSub(driver);
         var1.clickYardManagement().click();
-		Thread.sleep(5000);
+		Thread.sleep(10000);
     }
 
     @And("^I click on Yard Transfer PYT$")
@@ -76,7 +79,7 @@ public class PendingYardTransferStepDef extends PendingYardTransferMain {
     public void i_enter_search_values_pyt() throws Throwable {
         Thread.sleep(1000);
         PendingYardTransferSub var1 = new PendingYardTransferSub(driver);
-        var1.EnterSearchValues().sendKeys("65");
+        var1.EnterSearchValues().sendKeys("QR5679"); //65
     }
 
     @And("^I click search button PYT$")
@@ -115,21 +118,12 @@ public class PendingYardTransferStepDef extends PendingYardTransferMain {
         var1.clickYardInButton().click();
     }
 
-    @And("^I select yard PYT$")
-    public void i_select_yard_pyt() throws Throwable {
-        Thread.sleep(1000);
-        PendingYardTransferSub var1 = new PendingYardTransferSub(driver);
-        var1.clickSelectYard().click();
-        Thread.sleep(1000);
-        var1.selectYardWallampitiya().click();
-    }
-
     @And("^I select yard in sub category PYT$")
     public void i_select_yard_in_sub_category_pyt() throws Throwable {
         Thread.sleep(1000);
         PendingYardTransferSub var1 = new PendingYardTransferSub(driver);
         var1.clickYardSubCate().click();
-        Thread.sleep(1000);
+        Thread.sleep(2000);
         var1.selectYardSubCate().click();
     }
 

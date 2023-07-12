@@ -99,7 +99,7 @@ public class AdvertiseForTenderAndAuctionSub extends AdvertiseForTenderAndAuctio
 
 	public WebElement SelectTender()
 	{
-		By var_SelectTender = By.xpath("/html/body/div[4]/div/div/div/div[2]/div[1]/div/div/div[1]/div");
+		By var_SelectTender = By.xpath("/html/body/div[4]/div/div/div/div[2]/div[1]/div/div/div[2]/div");
 		return driver.findElement(var_SelectTender);
 	}
 
@@ -153,7 +153,7 @@ public class AdvertiseForTenderAndAuctionSub extends AdvertiseForTenderAndAuctio
 
 	public WebElement ClickOnCheckBox()
 	{
-		By var_ClickOnCheckBox = By.xpath("//*[@id=\"root\"]/div/div/div[2]/div/div/div/div[2]/div/div/div[2]/div[3]/div[2]/div/div/div/div/div/div/div/div/table/tbody/tr[2]/td[12]/div/div/label/span/input");
+		By var_ClickOnCheckBox = By.xpath("//*[@id=\"root\"]/div/div/div[2]/div/div/div/div[2]/div/div/div[2]/div[3]/div[2]/div/div/div/div/div/div/div/div/table/tbody/tr[2]/td[13]/div/div/label/span/input");
 		return driver.findElement(var_ClickOnCheckBox);
 	}
 

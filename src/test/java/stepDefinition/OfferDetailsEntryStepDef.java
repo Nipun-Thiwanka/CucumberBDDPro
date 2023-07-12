@@ -1,8 +1,6 @@
 package stepDefinition;
 
 
-import java.time.Duration;
-import java.util.concurrent.TimeUnit;
 import java.util.concurrent.TimeUnit;
 import java.io.File;
 import java.io.IOException;
@@ -63,12 +61,13 @@ public class OfferDetailsEntryStepDef extends OfferDetailsEntryMain {
         List<String> browserTabs = Lists.newArrayList(driver.getWindowHandles());
 		Thread.sleep(5000);
         var1.clickYardManagement().click();
-		Thread.sleep(5000);
+		Thread.sleep(10000);
     }
 
 
     @When("I click on Post Yard Management OED")
-    public void i_click_on_post_yard_management_oed() {
+    public void i_click_on_post_yard_management_oed() throws InterruptedException {
+    	Thread.sleep(5000);
         OfferDetailsEntrySub var1 = new OfferDetailsEntrySub(driver);
         List<String> browserTabs = Lists.newArrayList(driver.getWindowHandles());
         driver.switchTo().window(browserTabs.get(1));
@@ -150,35 +149,35 @@ public class OfferDetailsEntryStepDef extends OfferDetailsEntryMain {
 
     @When("I tick new buyer radio button OED")
     public void i_tick_new_buyer_radio_button_oed() throws InterruptedException {
-        Thread.sleep(2000);
+        Thread.sleep(500);
     	OfferDetailsEntrySub var1 = new OfferDetailsEntrySub(driver);
         var1.TickNewBuyer().click();
     }
 
     @When("I enter buyer name OED")
     public void i_enter_buyer_name_oed() throws InterruptedException {
-        Thread.sleep(2000);
+        Thread.sleep(500);
     	OfferDetailsEntrySub var1 = new OfferDetailsEntrySub(driver);
         var1.enterName().sendKeys("Test Buyer");
     }
 
     @When("I enter buyer NIC OED")
     public void i_enter_buyer_nic_oed() throws InterruptedException {
-        Thread.sleep(2000);
+        Thread.sleep(500);
     	OfferDetailsEntrySub var1 = new OfferDetailsEntrySub(driver);
         var1.enterNic().sendKeys("123456789V");
     }
 
     @When("I enter buyer mobile num OED")
     public void i_enter_buyer_mobile_num_oed() throws InterruptedException {
-        Thread.sleep(2000);
+        Thread.sleep(500);
     	OfferDetailsEntrySub var1 = new OfferDetailsEntrySub(driver);
         var1.enterMobileNum().sendKeys("1234567890");
     }
 
     @When("I enter offer OED")
     public void i_enter_offer_oed() throws InterruptedException {
-        Thread.sleep(2000);
+        Thread.sleep(500);
     	OfferDetailsEntrySub var1 = new OfferDetailsEntrySub(driver);
         var1.enterOffer().sendKeys("100000");
     }
@@ -198,7 +197,7 @@ public class OfferDetailsEntryStepDef extends OfferDetailsEntryMain {
     	OfferDetailsEntrySub var1 = new OfferDetailsEntrySub(driver);
         var1.clickMarketingOfficerSelect().click();
         Thread.sleep(2000);
-        var1.enterMarketingOffName().sendKeys("Theeksha Dumini");
+        var1.enterMarketingOffName().sendKeys("Lakshani Madushika");
         Thread.sleep(2000);
         JavascriptExecutor js = (JavascriptExecutor) driver;
         js.executeScript("arguments[0].scrollLeft = arguments[0].scrollWidth", var1.scrollToClickSelectBtn());
@@ -305,7 +304,7 @@ public class OfferDetailsEntryStepDef extends OfferDetailsEntryMain {
 
     @When("I update offer value UOED")
     public void i_update_offer_value_uoed() throws InterruptedException {
-        Thread.sleep(2000);
+        Thread.sleep(5000);
     	OfferDetailsEntrySub var1 = new OfferDetailsEntrySub(driver);
         JavascriptExecutor js = (JavascriptExecutor) driver;
    	 	js.executeScript("arguments[0].scrollIntoView(true);", var1.ScrollToUpdate());

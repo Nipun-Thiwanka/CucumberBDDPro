@@ -55,7 +55,7 @@ public class ResellingPriceUpdateStepDef extends ResellingPriceUpdateMain{
 		List<String> browserTabs = Lists.newArrayList(driver.getWindowHandles());
 		Thread.sleep(5000);
 		var1.clickYardManagement().click();
-		Thread.sleep(5000);
+		Thread.sleep(10000);
     }
 
     @And("^I click on Post Yard Management RPU$")
@@ -87,7 +87,7 @@ public class ResellingPriceUpdateStepDef extends ResellingPriceUpdateMain{
     public void i_enter_yard_in_date_to_rpu() throws InterruptedException {
         Thread.sleep(2000);
         ResellingPriceUpdateSub var1 = new ResellingPriceUpdateSub(driver);
-        var1.TardInDateTo().click();
+        var1.TardInDateTo().sendKeys("2023-05-17");
         Thread.sleep(2000);
         var1.SelectToDay().click();
     }
@@ -119,6 +119,12 @@ public class ResellingPriceUpdateStepDef extends ResellingPriceUpdateMain{
         Thread.sleep(2000);
         ResellingPriceUpdateSub var1 = new ResellingPriceUpdateSub(driver);
         var1.ClickUpdateButton().click();
+        Thread.sleep(2000);
+        var1.EnterUpdatedPrice().click();
+        JavascriptExecutor js = (JavascriptExecutor) driver;
+        js.executeScript("arguments[0].value = ''", var1.EnterUpdatedPrice());
+        Thread.sleep(2000);
+        var1.EnterUpdatedPrice().sendKeys("100000");
     }
 
     @When("I scroll down to save RPU")

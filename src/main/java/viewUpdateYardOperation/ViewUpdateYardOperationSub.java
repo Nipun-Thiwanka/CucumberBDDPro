@@ -135,7 +135,7 @@ public class ViewUpdateYardOperationSub extends ViewUpdateYardOperationMain{
 
 	public WebElement SelectDateTestCondt()
 	{
-		By var_SelectDateTestCondt = By.xpath("//*[@id=\"Test Conditiondate\"]");
+		By var_SelectDateTestCondt = By.xpath("//*[@id=\"Taxdate\"]");
 		return driver.findElement(var_SelectDateTestCondt);
 	}
 
@@ -159,7 +159,7 @@ public class ViewUpdateYardOperationSub extends ViewUpdateYardOperationMain{
 
 	public WebElement ClickOnDropdownTransmissionTyp()
 	{
-		By var_ClickOnDropdownTransmissionTyp = By.xpath("//*[@id=\"transmissionType\"]");
+		By var_ClickOnDropdownTransmissionTyp = By.xpath("//*[@id=\"root\"]/div/div/div[2]/div/div/div/div[2]/div/div/div/div[1]/div/div[5]/div/div/div[2]/form/div[1]/div[1]/div/div/div/div/div/div");
 		return driver.findElement(var_ClickOnDropdownTransmissionTyp);
 	}
 
@@ -171,7 +171,7 @@ public class ViewUpdateYardOperationSub extends ViewUpdateYardOperationMain{
 
 	public WebElement ClickOnDropdownFuelTyp()
 	{
-		By var_ClickOnDropdownFuelTyp = By.xpath("//*[@id=\"fuelType\"]");
+		By var_ClickOnDropdownFuelTyp = By.xpath("//*[@id=\"root\"]/div/div/div[2]/div/div/div/div[2]/div/div/div/div[1]/div/div[5]/div/div/div[2]/form/div[1]/div[2]/div/div/div/div/div/div");
 		return driver.findElement(var_ClickOnDropdownFuelTyp);
 	}
 
@@ -261,7 +261,7 @@ public class ViewUpdateYardOperationSub extends ViewUpdateYardOperationMain{
 
 	public WebElement ClickSelecLawyerLink()
 	{
-		By var_ClickSelecLawyerLink = By.xpath("//*[@id=\"root\"]/div/div/div[2]/div/div/div/div[2]/div/div/div/div[1]/div/div[5]/form/div/div[2]/div[5]/div[2]/div/div/div/div/div[1]/p/a");
+		By var_ClickSelecLawyerLink = By.xpath("//*[@id=\"root\"]/div/div/div[2]/div/div/div/div[2]/div/div/div/div[1]/div/div[4]/form/div/div[2]/div[5]/div[2]/div/div/div/div/div[1]/p/a");
 		return driver.findElement(var_ClickSelecLawyerLink);
 	}
 
@@ -279,7 +279,7 @@ public class ViewUpdateYardOperationSub extends ViewUpdateYardOperationMain{
 
 	public WebElement ClickLawyerSelectButton()
 	{
-		By var_ClickLawyerSelectButton = By.xpath("/html/body/div[8]/div/div[2]/div/div[2]/div[2]/div[2]/div/div/div/div/div/div[2]/table/tbody/tr[2]/td[3]/span");
+		By var_ClickLawyerSelectButton = By.xpath("/html/body/div[8]/div/div[2]/div/div[2]/div[2]/div[2]/div/div/div/div/div/div[2]/table/tbody/tr[2]/td[1]");
 		return driver.findElement(var_ClickLawyerSelectButton);
 	}
 
@@ -313,7 +313,7 @@ public class ViewUpdateYardOperationSub extends ViewUpdateYardOperationMain{
 
 	public WebElement ScrollDownToSalesStop()
 	{
-		By var_ScrollDownToSalesStop = By.xpath("//*[@id=\"root\"]/div/div/div[2]/div/div/div/div[2]/div/div/div/div[1]/div/div[7]/div/div[2]/div");
+		By var_ScrollDownToSalesStop = By.xpath("//*[@id=\"root\"]/div/div/div[2]/div/div/div/div[2]/div/div/div/div[1]/div/div[6]/div/div[2]/div");
 		return driver.findElement(var_ScrollDownToSalesStop);
 	}
 
@@ -325,7 +325,7 @@ public class ViewUpdateYardOperationSub extends ViewUpdateYardOperationMain{
 
 	public WebElement ClickOnSalesStopByLink()
 	{
-		By var_ClickOnSalesStopByLink = By.xpath("//*[@id=\"root\"]/div/div/div[2]/div/div/div/div[2]/div/div/div/div[1]/div/div[7]/div/div[2]/div/div/div/form/div/div[1]/div[2]/div/div/div/div/div[1]/p/a");
+		By var_ClickOnSalesStopByLink = By.xpath("//*[@id=\"root\"]/div/div/div[2]/div/div/div/div[2]/div/div/div/div[1]/div/div[6]/div/div[2]/div/div/div/form/div/div[1]/div[2]/div/div/div/div/div[1]/p/a");
 		return driver.findElement(var_ClickOnSalesStopByLink);
 	}
 
@@ -337,7 +337,7 @@ public class ViewUpdateYardOperationSub extends ViewUpdateYardOperationMain{
 
 	public WebElement ClickOnSearchResultInSalesStopBy()
 	{
-		By var_ClickOnSearchResultInSalesStopBy = By.xpath("/html/body/div[9]/div/div[2]/div/div[2]/div[2]/div[2]/div/div/div/div/div/div/div/table/tbody/tr[2]/td[3]");
+		By var_ClickOnSearchResultInSalesStopBy = By.xpath("/html/body/div[9]/div/div[2]/div/div[2]/div[2]/div[2]/div/div/div/div/div/div/div/table/tbody/tr[2]/td[2]");
 		return driver.findElement(var_ClickOnSearchResultInSalesStopBy);
 	}
 
@@ -349,19 +349,19 @@ public class ViewUpdateYardOperationSub extends ViewUpdateYardOperationMain{
 
 	public WebElement ClickOnDropdownStopReson()
 	{
-		By var_ClickOnDropdownStopReson = By.xpath("//*[@id=\"root\"]/div/div/div[2]/div/div/div/div[2]/div/div/div/div[1]/div/div[7]/div/div[2]/div/div/div/form/div/div[2]/div/div[1]/div/div/div/div/div");
+		By var_ClickOnDropdownStopReson = By.xpath("//*[@id=\"root\"]/div/div/div[2]/div/div/div/div[2]/div/div/div/div[1]/div/div[6]/div/div[2]/div/div/div/form/div/div[2]/div[1]/div[1]/div/div/div/div/div");
 		return driver.findElement(var_ClickOnDropdownStopReson);
 	}
 
 	public WebElement SelectClientAgreed()
 	{
-		By var_SelectClientAgreed = By.xpath("/html/body/div[11]/div/div/div/div[2]/div[1]/div/div/div[1]/div");
+		By var_SelectClientAgreed = By.xpath("/html/body/div[11]/div/div/div/div[2]/div[1]/div/div/div[1]");
 		return driver.findElement(var_SelectClientAgreed);
 	}
 
 	public WebElement ClickOnNeverExpire()
 	{
-		By var_ClickOnNeverExpire = By.xpath("//*[@id=\"root\"]/div/div/div[2]/div/div/div/div[2]/div/div/div/div[1]/div/div[7]/div/div[2]/div/div/div/label/span[1]/input");
+		By var_ClickOnNeverExpire = By.xpath("//*[@id=\"root\"]/div/div/div[2]/div/div/div/div[2]/div/div/div/div[1]/div/div[6]/div/div[2]/div/div/div/label/span[1]/input");
 		return driver.findElement(var_ClickOnNeverExpire);
 	}
 
@@ -379,13 +379,19 @@ public class ViewUpdateYardOperationSub extends ViewUpdateYardOperationMain{
 
 	public WebElement ScrollToSave()
 	{
-		By var_ScrollToSave = By.xpath("//*[@id=\"root\"]/div/div/div[2]/div/div/div/div[2]/div/div/div/div[2]/div/div/div/div[2]/button");
+		By var_ScrollToSave = By.xpath("//*[@id=\"root\"]/div/div/div[2]/div/div/div/div[2]/div/div/div/div[2]/div/div");
 		return driver.findElement(var_ScrollToSave);
+	}
+	
+	public WebElement SaveBTN()
+	{
+		By var_SaveBTN = By.xpath("//*[@id=\"root\"]/div/div/div[2]/div/div/div/div[2]/div/div/div/div[2]/div/div/div/div[2]/button");
+		return driver.findElement(var_SaveBTN);
 	}
 
 	public WebElement ClickYesBtnInSalesStop()
 	{
-		By var_ClickYesBtnInSalesStop = By.xpath("/html/body/div[14]/div/div[2]/div/div[2]/div/div/div[2]/button[2]");
+		By var_ClickYesBtnInSalesStop = By.xpath("/html/body/div[13]/div/div[2]/div/div[2]/div/div/div[2]/button[2]");
 		return driver.findElement(var_ClickYesBtnInSalesStop);
 	}
 

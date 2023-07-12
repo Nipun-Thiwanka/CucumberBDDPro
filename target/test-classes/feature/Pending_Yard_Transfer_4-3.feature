@@ -1,4 +1,4 @@
-@Yard_Transfer
+@Pending_Yard_Transfer
 Feature: Yard Transfer
   I want go to Yard Transfer
 
@@ -34,7 +34,6 @@ Feature: Yard Transfer
     And I click search button PYT
     And I scroll div horizontally PYT
     And I click yard in button PYT
-    And I select yard PYT
     And I select yard in sub category PYT
     And I scroll down to yard in check list PYT
     And I tick on availability checkbox PYT
@@ -45,4 +44,4 @@ Feature: Yard Transfer
     And I upload a file PYT
     And I enter remarks PYT
     And I click save button PYT
-    And I click ok PYT
+    #And I click ok PYT

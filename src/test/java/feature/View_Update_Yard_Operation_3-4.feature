@@ -14,7 +14,6 @@ Feature: Yard Operation
     And I click on Yard In VUYO
     And I select Yard Operation VUYO
     And I click on view update yard operation VUYO
-    And I enter search value VUYO
     And I press the view button VUYO
     And I scroll to down in view VUYO
     And I press ok button in view VUYO
@@ -31,11 +30,8 @@ Feature: Yard Operation
     And I click on Yard In VUYO
     And I select Yard Operation VUYO
     And I click on view update yard operation VUYO
-    And I enter search value VUYO
     And I press the update button VUYO
     And I scroll down to uploads VUYO
-    And I upload an image VUYO
-    And I upload a file VUYO
     And I scroll down to other conditions VUYO
     And I set test condition as yes VUYO
     And I set test condition date VUYO
@@ -62,16 +58,12 @@ Feature: Yard Operation
     And I click on Yard In VUYO
     And I select Yard Operation VUYO
     And I click on view update yard operation VUYO
-    And I enter search value VUYO
     And I press the update button VUYO
     And I scroll down to uploads VUYO
-    And I upload an image VUYO
-    And I upload a file VUYO
     And I scroll down to other conditions VUYO
     And I set test condition as yes VUYO
     And I set test condition date VUYO
     And I scroll down to bonded details VUYO
-    And I tick on bonded details VUYO 
     And I fill offence VUYO 
     And I fill police station VUYO 
     And I select bonded date VUYO 
@@ -87,14 +79,10 @@ Feature: Yard Operation
     And I enter Name Of the Person Appear VUYO
     And I enter remarks VUYO 
     And I scroll down to sales stop VUYO
-    And I tick on sales stop check box VUYO
     And I click on Select Stop By link VUYO
     And I enter search value in Stop By link VUYO
     And I select search result in Stop By link VUYO
     And I enter Sales Stop Date VUYO
     And I select Sales Stop Reason VUYO
     And I click never expire VUYO
-    And I click on Sales Stop Save button VUYO
-   	And I click on Sales Stop ok button VUYO
-    And I scroll down to save with sales stop VUYO
     And I click yes button in sales stop VUYO

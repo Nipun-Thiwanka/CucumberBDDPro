@@ -60,4 +60,48 @@ public WebDriver driver;
 		By SelectTemporaryRelease = By.xpath("//*[@id=\"/AnRkr/yard-release$Menu\"]/li[6]");
 		return driver.findElement(SelectTemporaryRelease);
 	}
+	
+	public WebElement SelectSoldAndReturns()
+	{
+		By SelectSoldAndReturns = By.xpath("//*[@id=\"/AnRkr/yard-release$Menu\"]/li[7]");
+		return driver.findElement(SelectSoldAndReturns);
+	}
+	
+	public WebElement enterVehicleNumber()
+	{
+		By enterVehicleNumber = By.xpath("//*[@id=\"root\"]/div/div/div[2]/div/div/div/div[2]/div/div/div/div/div[1]/div/div[1]/div/div[1]/span/input");
+		return driver.findElement(enterVehicleNumber);
+	}
+	
+	public WebElement scrollToClick()
+	{
+		By scrollToClick = By.xpath("//*[@id=\"root\"]/div/div/div[2]/div/div/div/div[2]/div/div/div/div/div[1]/div/div[2]/form/div/div/div/div/div/div");
+		return driver.findElement(scrollToClick);
+	}
+	
+	public WebElement TickOnCheckBox()
+	{
+		By TickOnCheckBox = By.xpath("//*[@id=\"root\"]/div/div/div[2]/div/div/div/div[2]/div/div/div/div/div[1]/div/div[2]/form/div/div/div/div/div/div/table/tbody/tr[2]/td[5]/div/div/label/span/input");
+		return driver.findElement(TickOnCheckBox);
+	}
+	
+	public WebElement EnterRemark()
+	{
+		By EnterRemark = By.xpath("//*[@id=\"comment0\"]");
+		return driver.findElement(EnterRemark);
+	}
+	
+	public WebElement ClickSaveButton()
+	{
+		By ClickSaveButton = By.xpath("//*[@id=\"root\"]/div/div/div[2]/div/div/div/div[2]/div/div/div/div/div[2]/div/div[2]/button");
+		return driver.findElement(ClickSaveButton);
+	}
+	
+	public WebElement ClickOkButton()
+	{
+		By ClickOkButton = By.xpath("/html/body/div[4]/div/div[2]/div/div[2]/div/div/div[2]/button[2]");
+		return driver.findElement(ClickOkButton);
+	}
+	
+	
 }

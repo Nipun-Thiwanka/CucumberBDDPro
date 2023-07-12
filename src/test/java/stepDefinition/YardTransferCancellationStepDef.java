@@ -52,12 +52,14 @@ public class YardTransferCancellationStepDef extends YardTransferCancellationMai
 
     @And("^I click Yard Management option YTCa$")
     public void i_click_yard_management_option_ytca() throws Throwable {
+    	Thread.sleep(5000);
+        YardTransferCancellationSub var1 = new YardTransferCancellationSub(driver);
+        JavascriptExecutor js = (JavascriptExecutor) driver;
+   	 	js.executeScript("arguments[0].scrollIntoView(true);", var1.scrollToYardManagement());
         List<String> browserTabs = Lists.newArrayList(driver.getWindowHandles());
 		Thread.sleep(5000);
-        Thread.sleep(1000);
-        YardTransferCancellationSub var1 = new YardTransferCancellationSub(driver);
         var1.clickYardManagement().click();
-		Thread.sleep(5000);
+		Thread.sleep(10000);
     }
 
     @And("^I click on Yard Transfer YTCa$")

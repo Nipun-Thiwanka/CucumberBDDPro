@@ -5,7 +5,7 @@ Feature: Offer Details Entry
   @click_on_Add_New_Offer_Entry_Details
   Scenario: Add New Offer Entry Details
   	#OED contains "Offer Entry Details"
-    Given I need to navigate LOLC FusionX Loging page for OED
+     Given I need to navigate LOLC FusionX Loging page for OED
     When I enter OED1 <Username>
     And I click continue button OED
     And I enter OED <Password>
@@ -27,7 +27,7 @@ Feature: Offer Details Entry
     And I enter buyer mobile num OED
     And I enter offer OED
     And I select payment method OED
-    #And I select Marketing officer OED
+    And I select Marketing officer OED
     And I upload file OED
     And I scroll down to add OED
     And I click add button OED

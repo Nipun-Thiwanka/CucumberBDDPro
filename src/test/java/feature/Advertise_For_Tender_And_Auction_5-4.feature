@@ -26,6 +26,6 @@ Feature: Advertise For Tender & Auction
     And I click select user button AFTnA
     And I scroll down to selevt AFTnA
     And I scroll horizontally Advertise div AFTnA
-    And I tick on Advertise checkbox AFTnA
+    And I tick on ReAdvertise checkbox AFTnA
     And I click save button AFTnA
     And I click ok button AFTnA

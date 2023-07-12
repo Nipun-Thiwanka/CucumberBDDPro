@@ -7,7 +7,7 @@ import io.cucumber.junit.CucumberOptions;
 @RunWith(Cucumber.class)
 @CucumberOptions(
 		features = "src/test/java/feature",
-		glue = "stepDefinition" , tags="@click_on_Temporary_Yard_Release")
+		glue = "stepDefinition" , tags="@Temporary_Yard_Release")
 public class TemporaryReleaseYardInRunner {
 
 }

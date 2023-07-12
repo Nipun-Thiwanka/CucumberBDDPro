@@ -81,7 +81,7 @@ public class ResellingPriceUpdateSub extends ResellingPriceUpdateMain {
 
 	public WebElement SelectToDay()
 	{
-		By var_SelectToDay = By.xpath("/html/body/div[4]/div/div/div/div/div[2]/a");
+		By var_SelectToDay = By.xpath("/html/body/div[4]/div/div/div/div/div[1]/div[2]/table/tbody/tr[3]/td[4]/div");
 		return driver.findElement(var_SelectToDay);
 	}
 
@@ -107,6 +107,12 @@ public class ResellingPriceUpdateSub extends ResellingPriceUpdateMain {
 	{
 		By var_ClickUpdateButton = By.xpath("//*[@id=\"root\"]/div/div/div[2]/div/div/div/div[2]/div/div/div[3]/div[1]/div/div/div/div/div/div/div/table/tbody/tr[2]/td[9]/div/div[2]/button");
 		return driver.findElement(var_ClickUpdateButton);
+	}
+	
+	public WebElement EnterUpdatedPrice()
+	{
+		By var_EnterUpdatedPrice = By.xpath("//*[@id=\"root\"]/div/div/div[2]/div/div/div/div[2]/div/div/div[3]/div[1]/div/div/div/div/div/div/div/table/tbody/tr[2]/td[9]/div/div[1]/div/div[2]/input");
+		return driver.findElement(var_EnterUpdatedPrice);
 	}
 
 	public WebElement ScrollToSave()

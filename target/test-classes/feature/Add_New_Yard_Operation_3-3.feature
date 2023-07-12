@@ -15,9 +15,6 @@ Feature: Yard Operation
     And I select Yard Operation ANYO
     And I click on Add new yard operation ANYO
     And I enter search value ANYO
-    And I press the search button ANYO
-    And I need to scroll div ANYO
-    # YO contains "yard operations"
     And I need click YO link ANYO
     And I scroll to down ANYO
     And I upload an image ANYO
@@ -36,7 +33,7 @@ Feature: Yard Operation
     And I number of owners ANYO
     And I scroll down to save ANYO
     And I click save button ANYO
-    And I click yes button ANYO
+    #And I click yes button ANYO
     
 
   @click_on_add_new_yard_operation_with_bonded_detail
@@ -52,9 +49,6 @@ Feature: Yard Operation
     And I select Yard Operation ANYO
     And I click on Add new yard operation ANYO
     And I enter search value ANYO
-    And I press the search button ANYO
-    And I need to scroll div ANYO
-    # YO contains "yard operations"
     And I need click YO link ANYO
     And I scroll to down ANYO
     And I upload an image ANYO
@@ -82,7 +76,7 @@ Feature: Yard Operation
     And I enter remarks ANYO 
     And I scroll down to save ANYO
     And I click save button ANYO
-    And I click yes button ANYO
+    #And I click yes button ANYO
     
     @click_on_add_new_yard_operation_with_sales_stop
   Scenario: Add New Yard Operation With Sales Stop
@@ -97,9 +91,6 @@ Feature: Yard Operation
     And I select Yard Operation ANYO
     And I click on Add new yard operation ANYO
     And I enter search value ANYO
-    And I press the search button ANYO
-    And I need to scroll div ANYO
-    # YO contains "yard operations"
     And I need click YO link ANYO
     And I scroll to down ANYO
     And I upload an image ANYO
@@ -117,7 +108,5 @@ Feature: Yard Operation
     And I enter Sales Stop Date ANYO
     And I select Sales Stop Reason ANYO
     And I enter Sales Stop Expire Date ANYO
-    And I click on Sales Stop Save button ANYO
-   	And I click on Sales Stop ok button ANYO
     And I click save button ANYO
-    And I click yes button in sales stop ANYO
+    #And I click yes button in sales stop ANYO

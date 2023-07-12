@@ -21,7 +21,7 @@ public class AddNewYardOperationStepDef extends AddNewYardOperationMain {
 	@Given("^I need to navigate LOLC FusionX Loging page for ANYO$")
     public void i_need_to_navigate_lolc_fusionx_loging_page_for_anyo() throws Throwable {
 		driver=inheritanceANYO();
-		driver.get("https://qa-sl.fusionx.biz/web/home/AnRkr/dashboard");
+		driver.get("https://uat-sl.fusionx.biz/web/home/AnRkr/dashboard");
 		driver.manage().window().maximize();
 		Thread.sleep(2000);
     }
@@ -87,23 +87,13 @@ public class AddNewYardOperationStepDef extends AddNewYardOperationMain {
     
     @And("^I enter search value ANYO$")
     public void i_enter_search_value_anyo() throws Throwable {
-    	Thread.sleep(3000);
+    	Thread.sleep(5000);
     	AddNewYardOperationSub var1=new AddNewYardOperationSub(driver);
-		var1.EnterSearchValues().sendKeys("27");
-    }
-
-    @And("^I press the search button ANYO$")
-    public void i_press_the_search_button_anyo() throws Throwable {
-    	Thread.sleep(2000);
-    	AddNewYardOperationSub var1=new AddNewYardOperationSub(driver);
+		var1.EnterSearchValues().sendKeys("KF7423");
+		Thread.sleep(2000);
 		var1.PressSearchBtn().click();
-    }
-
-    @And("^I need to scroll div ANYO$")
-    public void i_need_to_scroll_div_anyo() throws Throwable {
-    	Thread.sleep(2000);
-    	AddNewYardOperationSub var1 = new AddNewYardOperationSub(driver);
-        JavascriptExecutor js = (JavascriptExecutor) driver;
+		Thread.sleep(2000);
+		JavascriptExecutor js = (JavascriptExecutor) driver;
         js.executeScript("arguments[0].scrollLeft = arguments[0].scrollWidth", var1.ScrollDiv());
     }
 
@@ -412,7 +402,7 @@ public class AddNewYardOperationStepDef extends AddNewYardOperationMain {
     public void i_enter_search_value_in_stop_by_link_anyo() throws Throwable {
     	Thread.sleep(1000);
     	AddNewYardOperationSub var1=new AddNewYardOperationSub(driver);
-		var1.EnterSearchValueInStopByLink().sendKeys("test new");
+		var1.EnterSearchValueInStopByLink().sendKeys("Lakshani Ma");
     }
 
     @And("^I select search result in Stop By link ANYO$")

@@ -1,7 +1,22 @@
 @Yard_Release
 Feature: Yard Release
   I want go to Yard Release
-
+  
+@click_on_Release_Approval
+  Scenario: Click on Release Approval
+  	#RA contains "Release Approval"
+    Given I need to navigate LOLC FusionX Loging page for YR
+    When I enter YR1 <Username>
+    And I click continue button YR
+    And I enter YR <Password>
+    And I click the sign in button YR
+    And I click Yard Management option YR
+    And I click on Yard Release YR
+    And I select Release Approval RA
+    And I search by vehicle number RA
+    And I tick on approve check box RA
+    And I click save button RA
+    
   @click_on_Add_New_Yard_Release_with_Release_Type_Temporary_and_Release_Sub_Type_General
   Scenario: Add New Yard Release with Release Type Temporary and Release Sub Type General
   	#YR contains "Yard Release"
@@ -20,7 +35,7 @@ Feature: Yard Release
     And I click select button YR
     And I enter return date YR
     And I enter Release Reason YR
-    #And I enter Release Checked by YR
+    And I enter Release Checked by YR
     And I scroll down to check list YR
     And I scroll horizontally to check list YR
     And I tick check list YR
@@ -34,20 +49,7 @@ Feature: Yard Release
     And I enter Special Remark YR
     And I click save button YR
     
-     @click_on_Release_Approval
-  Scenario: Click on Release Approval
-  	#RA contains "Release Approval"
-    Given I need to navigate LOLC FusionX Loging page for YR
-    When I enter YR1 <Username>
-    And I click continue button YR
-    And I enter YR <Password>
-    And I click the sign in button YR
-    And I click Yard Management option YR
-    And I click on Yard Release YR
-    And I select Release Approval RA
-    And I search by vehicle number RA
-    And I tick on approve check box RA
-    And I click save button RA
+     
     
      @click_on_Add_New_Yard_Release_with_Release_Type_Temporary_and_Release_Sub_Type_Dealer_Point
   Scenario: Add New Yard Release with Release Type Temporary and Release Sub Type Dealer Point 

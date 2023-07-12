@@ -20,7 +20,7 @@ public class AdvertiseForTenderAndAuctionStepDef extends AdvertiseForTenderAndAu
     @Given("I need to navigate LOLC FusionX Loging page for AFTnA")
     public void i_need_to_navigate_lolc_fusion_x_loging_page_for_af_tn_a() throws InterruptedException {
         driver=inheritancAFTnA();
-        driver.get("https://qa-sl.fusionx.biz/web/home/AnRkr/dashboard");
+        driver.get("https://uat-sl.fusionx.biz/web/home/AnRkr/dashboard");
         driver.manage().window().maximize();
         Thread.sleep(2000);
     }
@@ -81,7 +81,7 @@ public class AdvertiseForTenderAndAuctionStepDef extends AdvertiseForTenderAndAu
     public void i_enter_branch_af_tn_a() throws InterruptedException {
         Thread.sleep(2000);
         AdvertiseForTenderAndAuctionSub var1 = new AdvertiseForTenderAndAuctionSub(driver);
-        var1.EnterBranch().sendKeys("");
+        var1.EnterBranch().sendKeys("DIGANA");
     }
 
     @When("I select Advertised Status AFTnA")
@@ -97,7 +97,7 @@ public class AdvertiseForTenderAndAuctionStepDef extends AdvertiseForTenderAndAu
     public void i_enter_vehicle_number_af_tn_a() throws InterruptedException {
         Thread.sleep(2000);
         AdvertiseForTenderAndAuctionSub var1 = new AdvertiseForTenderAndAuctionSub(driver);
-        var1.EnterVehicleNumber().sendKeys("HW2527");
+        var1.EnterVehicleNumber().sendKeys("JM7177");
     }
 
     @When("I click search button AFTnA")
@@ -112,7 +112,7 @@ public class AdvertiseForTenderAndAuctionStepDef extends AdvertiseForTenderAndAu
         Thread.sleep(2000);
         AdvertiseForTenderAndAuctionSub var1 = new AdvertiseForTenderAndAuctionSub(driver);
         var1.ClickOnTypeDropDown().click();
-        Thread.sleep(1000);
+        Thread.sleep(2000);
         var1.SelectTender().click();
     }
 
@@ -175,8 +175,8 @@ public class AdvertiseForTenderAndAuctionStepDef extends AdvertiseForTenderAndAu
         js.executeScript("arguments[0].scrollLeft = arguments[0].scrollWidth", var1.scrollToTick());
     }
 
-    @When("I tick on Advertise checkbox AFTnA")
-    public void i_tick_on_advertise_checkbox_af_tn_a() throws InterruptedException {
+    @When("I tick on ReAdvertise checkbox AFTnA")
+    public void i_tick_on_readvertise_checkbox_af_tn_a() throws InterruptedException {
         Thread.sleep(2000);
         AdvertiseForTenderAndAuctionSub var1 = new AdvertiseForTenderAndAuctionSub(driver);
         var1.ClickOnCheckBox().click();

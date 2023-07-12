@@ -37,6 +37,12 @@ public class PendingYardTransferSub extends PendingYardTransferMain {
 		return driver.findElement(var_submit_btn);
 	}
 	
+	public WebElement scrollToYardManagement()
+	{
+		By clickYardManagement = By.xpath("//*[@id=\"root\"]/div/div[2]/div/div/div/div/div/div[2]");
+		return driver.findElement(clickYardManagement);
+	}
+	
 	public WebElement clickYardManagement()
 	{
 		By var_yard = By.xpath("//*[@id=\"root\"]/div/div[2]/div/div/div/div/div/div[2]/div[8]/div");
@@ -111,7 +117,7 @@ public class PendingYardTransferSub extends PendingYardTransferMain {
 
 	public WebElement selectYardSubCate()
 	{
-		By var_selectYardSubCate = By.xpath("/html/body/div[4]/div/div/div/div[2]/div[1]/div/div/div[1]/div");
+		By var_selectYardSubCate = By.xpath("/html/body/div[3]/div/div/div/div[2]/div[1]/div/div/div[2]/div");
 		return driver.findElement(var_selectYardSubCate);
 	}
 

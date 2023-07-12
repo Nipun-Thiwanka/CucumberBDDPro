@@ -38,7 +38,7 @@ public class YardTransferCreationStepDef extends YardTransferCreationMain {
     @And("^I enter YTC (.+)$")
     public void i_enter_ytc(String password) throws Throwable {
         YardTransferCreationSub var1 = new YardTransferCreationSub(driver);
-        var1.typePassword().sendKeys("Hecember@1234");
+        var1.typePassword().sendKeys("September@1234");
     }
 
     @And("^I click the sign in button YTC$")
@@ -49,11 +49,14 @@ public class YardTransferCreationStepDef extends YardTransferCreationMain {
 
     @And("^I click Yard Management option YTC$")
     public void i_click_yard_management_option_ytc() throws Throwable {
+    	Thread.sleep(5000);
+        YardTransferCreationSub var1 = new YardTransferCreationSub(driver);
+        JavascriptExecutor js = (JavascriptExecutor) driver;
+   	 	js.executeScript("arguments[0].scrollIntoView(true);", var1.scrollToYardManagement());
         List<String> browserTabs = Lists.newArrayList(driver.getWindowHandles());
 		Thread.sleep(5000);
-        YardTransferCreationSub var1 = new YardTransferCreationSub(driver);
         var1.clickYardManagement().click();
-		Thread.sleep(5000);
+		Thread.sleep(10000);
     }
 
     @And("^I click on Yard Transfer YTC$")
@@ -88,7 +91,7 @@ public class YardTransferCreationStepDef extends YardTransferCreationMain {
 
     @And("^I select search result YTC$")
     public void i_select_search_result_ytc() throws Throwable {
-        Thread.sleep(1000);
+        Thread.sleep(5000);
         YardTransferCreationSub var1 = new YardTransferCreationSub(driver);
         var1.ClickSelectButton().click();
     }

@@ -23,7 +23,7 @@ public class ViewUpdateYardOperationStepDef extends ViewUpdateYardOperationMain 
 	 	@Given("^I need to navigate LOLC FusionX Loging page for VUYO$")
 	    public void i_need_to_navigate_lolc_fusionx_loging_page_for_vuyo() throws Throwable {
 	 		driver=inheritanceVUYO();
-			driver.get("https://qa-sl.fusionx.biz/web/home/AnRkr/dashboard");
+			driver.get("https://uat-sl.fusionx.biz/web/home/AnRkr/dashboard");
 			driver.manage().window().maximize();
 			Thread.sleep(2000);
 	    }
@@ -91,13 +91,16 @@ public class ViewUpdateYardOperationStepDef extends ViewUpdateYardOperationMain 
 	    public void i_enter_search_value_vuyo() throws Throwable {
 	    	Thread.sleep(1000);
 	    	ViewUpdateYardOperationSub var1 = new ViewUpdateYardOperationSub(driver);
-	    	var1.EnterSearchValue().sendKeys("1226");
+	    	var1.EnterSearchValue().sendKeys("QU2516");
+	    	Thread.sleep(1000);
 	    }
 
 	    @And("^I press the view button VUYO$")
 	    public void i_press_the_view_button_vuyo() throws Throwable {
 	    	Thread.sleep(1000);
 	    	ViewUpdateYardOperationSub var1 = new ViewUpdateYardOperationSub(driver);
+	    	var1.EnterSearchValue().sendKeys("QU2516");
+	    	Thread.sleep(1000);
 	    	var1.ClickViewButton().click();
 	    }
 
@@ -119,8 +122,10 @@ public class ViewUpdateYardOperationStepDef extends ViewUpdateYardOperationMain 
 	    
 	    @And("^I press the update button VUYO$")
 	    public void i_press_the_update_button_vuyo() throws Throwable {
-	        Thread.sleep(1000);
+	        Thread.sleep(4000);
 	    	ViewUpdateYardOperationSub var1 = new ViewUpdateYardOperationSub(driver);
+	    	var1.EnterSearchValue().sendKeys("QU2516");
+	    	Thread.sleep(1000);
 	    	var1.ClickUpdateLink().click();
 	    }
 
@@ -233,6 +238,10 @@ public class ViewUpdateYardOperationStepDef extends ViewUpdateYardOperationMain 
 	    public void i_set_milage_vuyo() throws Throwable {
 	        Thread.sleep(1000);
 	    	ViewUpdateYardOperationSub var1 = new ViewUpdateYardOperationSub(driver);
+	    	var1.SetMilage().click();
+	    	JavascriptExecutor js = (JavascriptExecutor) driver;
+	        js.executeScript("arguments[0].value = ''", var1.SetMilage());
+	        Thread.sleep(2000);
 	    	var1.SetMilage().sendKeys("56000");
 	    }
 
@@ -240,6 +249,9 @@ public class ViewUpdateYardOperationStepDef extends ViewUpdateYardOperationMain 
 	    public void i_number_of_owners_vuyo() throws Throwable {
 	        Thread.sleep(1000);
 	    	ViewUpdateYardOperationSub var1 = new ViewUpdateYardOperationSub(driver);
+	    	var1.SetOwners().click();
+	    	JavascriptExecutor js = (JavascriptExecutor) driver;
+	        js.executeScript("arguments[0].value = ''", var1.SetOwners());
 	    	var1.SetOwners().sendKeys("2");
 	    }
 
@@ -285,6 +297,10 @@ public class ViewUpdateYardOperationStepDef extends ViewUpdateYardOperationMain 
 		public void i_fill_offence_vuyo() throws Throwable {
         	Thread.sleep(1000);
 	    	ViewUpdateYardOperationSub var1 = new ViewUpdateYardOperationSub(driver);
+	    	var1.EnterOffence().click();
+	    	JavascriptExecutor js = (JavascriptExecutor) driver;
+	        js.executeScript("arguments[0].value = ''", var1.EnterOffence());
+	        Thread.sleep(2000);
 			var1.EnterOffence().sendKeys("Test Offence");
     }
 
@@ -292,6 +308,10 @@ public class ViewUpdateYardOperationStepDef extends ViewUpdateYardOperationMain 
 		public void i_fill_police_station_vuyo() throws Throwable {
         	Thread.sleep(1000);
 	    	ViewUpdateYardOperationSub var1 = new ViewUpdateYardOperationSub(driver);
+	    	var1.EnterPoliceStation().click();
+	    	JavascriptExecutor js = (JavascriptExecutor) driver;
+	        js.executeScript("arguments[0].value = ''", var1.EnterPoliceStation());
+	        Thread.sleep(2000);
 			var1.EnterPoliceStation().sendKeys("Test Police Station");
     }
 
@@ -310,6 +330,10 @@ public class ViewUpdateYardOperationStepDef extends ViewUpdateYardOperationMain 
 		public void i_enter_bonded_value_vuyo() throws Throwable {
 			Thread.sleep(1000);
 	    	ViewUpdateYardOperationSub var1 = new ViewUpdateYardOperationSub(driver);
+	    	var1.EnterBondedValue().click();
+			JavascriptExecutor js = (JavascriptExecutor) driver;
+			js.executeScript("arguments[0].value = ''", var1.EnterBondedValue());
+			Thread.sleep(2000);
 			var1.EnterBondedValue().sendKeys("100000");
     }
 
@@ -417,12 +441,12 @@ public class ViewUpdateYardOperationStepDef extends ViewUpdateYardOperationMain 
 		public void i_enter_search_value_in_stop_by_link_vuyo() throws Throwable {
 			Thread.sleep(1000);
 	    	ViewUpdateYardOperationSub var1 = new ViewUpdateYardOperationSub(driver);
-			var1.EnterSearchValueInStopByLink().sendKeys("test new");
+			var1.EnterSearchValueInStopByLink().sendKeys("Lakshani Ma");
 		}
 
 		@And("^I select search result in Stop By link VUYO$")
 		public void i_select_search_result_in_stop_by_link_vuyo() throws Throwable {
-			Thread.sleep(1000);
+			Thread.sleep(5000);
 	    	ViewUpdateYardOperationSub var1 = new ViewUpdateYardOperationSub(driver);
 			var1.ClickOnSearchResultInSalesStopBy().click();
 		}
@@ -478,6 +502,8 @@ public class ViewUpdateYardOperationStepDef extends ViewUpdateYardOperationMain 
 		public void i_click_yes_button_in_sales_stop_vuyo() throws Throwable {
 			Thread.sleep(3000);
 	    	ViewUpdateYardOperationSub var1 = new ViewUpdateYardOperationSub(driver);
+	    	var1.SaveBTN().click();
+	    	Thread.sleep(1000);
 			var1.ClickYesBtnInSalesStop().click();
 			
 		}

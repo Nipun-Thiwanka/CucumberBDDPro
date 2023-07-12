@@ -129,19 +129,19 @@ public WebDriver driver;
 
 	public WebElement ClickOnCheckedByLink()
 	{
-		By var_ClickOnCheckedByLink= By.xpath("");
+		By var_ClickOnCheckedByLink= By.xpath("//*[@id=\"root\"]/div/div/div[2]/div/div/div/div/div/div/form/div[3]/div/div/div[2]/div[3]/div/div/div/div/div[1]/p/a");
 		return driver.findElement(var_ClickOnCheckedByLink);
 	}
 
 	public WebElement SearchCheckedPerson()
 	{
-		By var_SearchCheckedPerson= By.xpath("");
+		By var_SearchCheckedPerson= By.xpath("/html/body/div[7]/div/div[2]/div/div[2]/div[2]/div[1]/div/div[1]/span/input");
 		return driver.findElement(var_SearchCheckedPerson);
 	}
 
 	public WebElement SelectPerson()
 	{
-		By var_SelectPerson= By.xpath("");
+		By var_SelectPerson= By.xpath("/html/body/div[7]/div/div[2]/div/div[2]/div[2]/div[2]/div/div/div/div/div/div/div/table/tbody/tr[2]/td[2]");
 		return driver.findElement(var_SelectPerson);
 	}
 
@@ -159,7 +159,19 @@ public WebDriver driver;
 
 	public WebElement TickCheckBox()
 	{
-		By var_TickCheckBox= By.xpath("//*[@id=\"isAvailableOutForItemId7009\"]");
+		By var_TickCheckBox= By.xpath("//*[@id=\"isAvailableOutForItemId10588\"]");
+		return driver.findElement(var_TickCheckBox);
+	}
+	
+	public WebElement TickCheckBox1()
+	{
+		By var_TickCheckBox= By.xpath("//*[@id=\"isAvailableOutForItemId10589\"]");
+		return driver.findElement(var_TickCheckBox);
+	}
+	
+	public WebElement TickCheckBox2()
+	{
+		By var_TickCheckBox= By.xpath("//*[@id=\"isAvailableOutForItemId10590\"]");
 		return driver.findElement(var_TickCheckBox);
 	}
 

@@ -61,7 +61,7 @@ public class YardReleaseStepDef extends YardReleaseMain{
         List<String> browserTabs = Lists.newArrayList(driver.getWindowHandles());
 		Thread.sleep(5000);
         var1.clickYardManagement().click();
-		Thread.sleep(5000);
+		Thread.sleep(10000);
 	}
 
 	@When("I click on Yard Release YR")
@@ -148,7 +148,7 @@ public class YardReleaseStepDef extends YardReleaseMain{
 		YardReleaseSub var1 = new YardReleaseSub(driver);
 		var1.ClickOnCheckedByLink().click();
 		Thread.sleep(2000);
-		var1.SearchCheckedPerson().sendKeys("Test Reason");
+		var1.SearchCheckedPerson().sendKeys("Lakshani Ma");
 		Thread.sleep(2000);
 		var1.SelectPerson().click();
 	}
@@ -174,6 +174,8 @@ public class YardReleaseStepDef extends YardReleaseMain{
 	    Thread.sleep(2000);
 		YardReleaseSub var1 = new YardReleaseSub(driver);
 		var1.TickCheckBox().click();
+		var1.TickCheckBox1().click();
+		var1.TickCheckBox2().click();
 	}
 
 	@When("I scroll down to fill YR")
@@ -404,7 +406,7 @@ public class YardReleaseStepDef extends YardReleaseMain{
 	public void i_search_by_vehicle_number_ra() throws InterruptedException {
 		Thread.sleep(2000);
 		YardReleaseSub var1 = new YardReleaseSub(driver);
-		var1.VehicleNu().sendKeys("QW4820");
+		var1.VehicleNu().sendKeys("DAB8017");
 	}
 	
 	@When("I tick on approve check box RA")
