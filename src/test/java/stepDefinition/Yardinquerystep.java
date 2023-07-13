@@ -45,7 +45,7 @@ public class Yardinquerystep extends YardInquiryMain {
   public void i_enter_password_yard_inquery_yi() throws Throwable 
   {
     	YardInquirySub var1=new YardInquirySub(driver);
-	    var1.typePassword().sendKeys("Hecember@1234");
+	    var1.typePassword().sendKeys("September@1234");
 	    Thread.sleep(2000);
 
   }
@@ -60,9 +60,12 @@ public class Yardinquerystep extends YardInquiryMain {
   @And("^I click Yard in option yard inquery YI$")
   public void i_click_yard_in_option_yard_inquery_yi() throws Throwable
   {
-    	List<String> browserTabs = Lists.newArrayList(driver.getWindowHandles());
-		Thread.sleep(5000);
+	  	Thread.sleep(5000);
 		YardInquirySub var1=new YardInquirySub(driver);
+		JavascriptExecutor js = (JavascriptExecutor) driver;
+   	 	js.executeScript("arguments[0].scrollIntoView(true);", var1.scrollToYardManagement());
+        List<String> browserTabs = Lists.newArrayList(driver.getWindowHandles());
+		Thread.sleep(5000);
 		var1.clickYardIn().click();
 		Thread.sleep(5000);
 		

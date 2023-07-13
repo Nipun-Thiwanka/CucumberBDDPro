@@ -1,5 +1,5 @@
 
-@tag
+@Yard_Valuation
 Feature: Title of your feature
   I want to use this template for my feature file
 
@@ -10,7 +10,7 @@ Feature: Title of your feature
     When I enter   <Username> CANYV  
     And I click continue button  CANYV  
     And I enter CANYV  <Password> 
-    And I click the sign in button CANYV  
+    And I click the sign in button CANYV 
     And I click Yard Management CANYV  
     And I click on Post Yard Management CANYV  
     And I click The Yard Valuation CANYV

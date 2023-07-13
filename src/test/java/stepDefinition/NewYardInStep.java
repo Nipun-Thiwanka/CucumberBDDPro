@@ -44,7 +44,7 @@ public class NewYardInStep extends ClickOnAddNewYardInMain{
 	@When("I enter CANYI <Password> CANYI")
 	public void i_enter_canyi_password_canyi() throws Throwable {
 		 ClickOnAddNewYardInSub var1=new ClickOnAddNewYardInSub(driver);
-		 var1.typePassword().sendKeys("Hecember@1234");
+		 var1.typePassword().sendKeys("September@1234");
 		 Thread.sleep(2000);
 	}
 	
@@ -56,9 +56,12 @@ public class NewYardInStep extends ClickOnAddNewYardInMain{
 	
 	@When("I click Yard Management CANYI")
 	public void i_click_yard_management_canyi()  throws Throwable {
-		List<String> browserTabs = Lists.newArrayList(driver.getWindowHandles());
 		Thread.sleep(3000);
 		ClickOnAddNewYardInSub var1=new ClickOnAddNewYardInSub(driver);
+		JavascriptExecutor js = (JavascriptExecutor) driver;
+   	 	js.executeScript("arguments[0].scrollIntoView(true);", var1.scrollToYardManagement());
+        List<String> browserTabs = Lists.newArrayList(driver.getWindowHandles());
+		Thread.sleep(5000);
 		var1.clickYardManagement().click();
 		Thread.sleep(3000);
 	}

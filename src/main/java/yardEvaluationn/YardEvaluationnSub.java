@@ -38,6 +38,12 @@ public WebElement clicksubmit()
 	return driver.findElement(var_submit_btn);
 	
 }
+public WebElement ScrollToYardManagement()
+{
+	By var_ScrollToYardManagement= By.xpath("//*[@id=\"root\"]/div/div[2]/div/div/div/div/div/div[2]");
+	return driver.findElement(var_ScrollToYardManagement);
+}
+
 public WebElement clickYardManagement()
 {
 	By var_clickYardManagement = By.xpath("//*[@id=\"root\"]/div/div[2]/div/div/div/div/div/div[2]/div[8]/div/div[1]");
@@ -237,9 +243,6 @@ public WebElement   ClickSaveOkUpdateBtnValuation()
 	By var_ClickSaveOkUpdateBtnValuation= By.xpath("/html/body/div[6]/div/div[2]/div/div[2]/div/div/div[2]/button[2]");
 	return driver.findElement(var_ClickSaveOkUpdateBtnValuation);
 }
-
-
-
 
 
 }

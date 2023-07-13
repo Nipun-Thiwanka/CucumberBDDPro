@@ -1,4 +1,4 @@
-@tag
+@Add_New_Yard_In
 Feature: Title of your feature
   I want to use this template for my feature file
 
